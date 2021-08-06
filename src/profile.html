@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../dist/style.css" />
+		<title>Profile</title>
+	</head>
+	<body>
+		<div class="flex w-screen h-screen text-gray-700">
+			<!-- Component Start -->
+			<div
+				class="
+					flex flex-col
+					items-start
+					md:w-60
+					w-20
+					flex-shrink-0
+					pb-4
+					overflow-auto
+					border-r border-gray-300
+				"
+			>
+				<a
+					class="
+						flex
+						items-center
+						justify-center
+						flex-shrink-0
+						w-full
+						h-16
+						bg-gray-100
+					"
+					href="#"
+				>
+					<img src="./logo.svg" alt="" srcset="" />
+				</a>
+				<div class="w-full h-screen p-4">
+					<a
+						class="
+							flex
+							items-center
+							justify-center
+							md:justify-start
+							flex-shrink-0
+							w-full
+							transition
+							duration-100
+							ease-linear
+							h-12
+							p-2
+							md:p-4
+							rounded-md
+							hover:bg-gray-200
+						"
+						href="./dashboard.html"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="h-6 w-6"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"
+							/>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"
+							/>
+						</svg>
+						<span class="ml-2 font-semibold hidden md:block">Dashboard</span>
+					</a>
+					<a
+						class="
+							group
+							flex
+							items-center
+							justify-center
+							md:justify-start
+							flex-shrink-0
+							w-full
+							transition
+							duration-100
+							ease-linear
+							h-12
+							mt-4
+							p-2
+							md:p-4
+							rounded-md
+							hover:bg-gray-200
+							font-semibold
+							bg-gray-200
+						"
+						href="#"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="h-6 w-6"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+							/>
+						</svg>
+						<span class="ml-2 hidden md:block">Profile</span>
+					</a>
+					<a
+						class="
+							flex
+							items-center
+							justify-center
+							md:justify-start
+							flex-shrink-0
+							w-full
+							transition
+							duration-100
+							ease-linear
+							h-12
+							mt-4
+							p-2
+							md:p-4
+							rounded-md
+							hover:bg-gray-200
+							font-semibold
+						"
+						href="./myblogs.html"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="h-6 w-6"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+							/>
+						</svg>
+						<span class="ml-2 hidden md:block">Posted</span>
+					</a>
+					<a
+						class="
+							flex
+							items-center
+							justify-center
+							md:justify-start
+							flex-shrink-0
+							w-full
+							transition
+							duration-100
+							ease-linear
+							h-12
+							mt-4
+							p-2
+							md:p-4
+							rounded-md
+							hover:bg-gray-200
+							font-semibold
+						"
+						href="#"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="h-6 w-6"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
+							/>
+						</svg>
+						<span class="ml-2 hidden md:block">Write</span>
+					</a>
+					<a
+						class="
+							flex
+							items-center
+							justify-center
+							md:justify-start
+							flex-shrink-0
+							w-full
+							transition
+							duration-100
+							ease-linear
+							h-12
+							mt-4
+							p-2
+							md:p-4
+							rounded-md
+							hover:bg-gray-200
+							font-semibold
+						"
+						href="#"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="h-6 w-6"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+							/>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+							/>
+						</svg>
+						<span class="ml-2 hidden md:block">Settings</span>
+					</a>
+					<a
+						class="
+							flex
+							items-center
+							justify-center
+							md:justify-start
+							flex-shrink-0
+							w-full
+							transition
+							duration-100
+							ease-linear
+							h-12
+							p-2
+							mt-2
+							md:p-4
+							rounded-md
+							hover:bg-gray-200
+							font-semibold
+						"
+						href="#"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="h-6 w-6"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
+							/>
+						</svg>
+						<span class="ml-2 hidden md:block">Theme</span>
+					</a>
+					<a
+						class="
+							relative
+							flex
+							items-center
+							w-full
+							h-12
+							px-3
+							mt-2
+							rounded-md
+							hover:bg-gray-200
+						"
+						href="#"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="h-6 w-6"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+							/>
+						</svg>
+						<span class="ml-2 text-sm font-medium hidden md:block"
+							>Notification</span
+						>
+						<span
+							class="
+								absolute
+								top-0
+								left-0
+								w-2
+								h-2
+								mt-2
+								ml-2
+								bg-indigo-500
+								rounded-full
+							"
+						></span>
+					</a>
+				</div>
+				<div class="w-full px-4">
+					<a
+						class="
+							mt-auto
+							flex
+							items-center
+							justify-center
+							md:justify-start
+							flex-shrink-0
+							w-full
+							transition
+							duration-100
+							ease-linear
+							p-2
+							md:p-4
+							h-12
+							rounded-md
+							hover:bg-gray-200
+						"
+						href="#"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="h-6 w-6"
+							viewBox="0 0 20 20"
+							fill="currentColor"
+						>
+							<path
+								fill-rule="evenodd"
+								d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z"
+								clip-rule="evenodd"
+							/>
+						</svg>
+						<span class="ml-2 hidden md:block">Logout</span>
+					</a>
+				</div>
+			</div>
+			<div class="flex flex-col flex-grow">
+				<div class="p-4 sm:px-6 flex items-center justify-start h-16 border-b">
+					<div class="">
+						<h3 class="text-lg leading-6 font-medium text-gray-900">
+							Himanshu
+						</h3>
+						<p class="mt-1 max-w-2xl text-sm text-gray-500 hidden md:block">
+							Your personal information
+						</p>
+					</div>
+					<button
+						class="
+							flex
+							items-center
+							justify-center
+							h-10
+							px-5
+							ml-auto
+							text-sm
+							font-medium
+							border
+							hover:bg-gray-200
+							rounded-full
+						"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="h-6 w-6"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
+							/>
+						</svg>
+						<span class="ml-2"> Edit </span>
+					</button>
+				</div>
+
+				<div class="flex-grow overflow-auto bg-gray-100">
+					<div class="bg-white overflow-hidden min-h-full">
+						<div class="border-gray-200">
+							<dl>
+								<div
+									class="
+										border-b
+										px-4
+										py-5
+										sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6
+									"
+								>
+									<dt class="text-sm font-medium text-gray-500">First name</dt>
+									<dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+										Margot Foster
+									</dd>
+								</div>
+								<div
+									class="
+										border-b
+										px-4
+										py-5
+										sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6
+									"
+								>
+									<dt class="text-sm font-medium text-gray-500">Last name</dt>
+									<dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+										Margot Foster
+									</dd>
+								</div>
+								<div
+									class="
+										border-b
+										px-4
+										py-5
+										sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6
+									"
+								>
+									<dt class="text-sm font-medium text-gray-500">User name</dt>
+									<dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+										Backend Developer
+									</dd>
+								</div>
+								<div
+									class="
+										border-b
+										px-4
+										py-5
+										sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6
+									"
+								>
+									<dt class="text-sm font-medium text-gray-500">
+										Email address
+									</dt>
+									<dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+										margotfoster@example.com
+									</dd>
+								</div>
+								<div
+									class="
+										border-b
+										px-4
+										py-5
+										sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6
+									"
+								>
+									<dt class="text-sm font-medium text-gray-500">Bio</dt>
+									<dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+										Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+										Nostrum commodi expedita laborum? Ullam rerum mollitia
+										obcaecati a harum, sint dignissimos iure eius aperiam nemo
+										nisi dolor necessitatibus totam minus, ex laborum aliquam
+										officia doloremque accusamus soluta porro recusandae! Sequi,
+										nisi eveniet asperiores cumque eligendi hic nobis magni nam
+										eaque exercitationem.
+									</dd>
+								</div>
+								<div
+									class="
+										border-b
+										px-4
+										py-5
+										sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6
+									"
+								>
+									<dt class="text-sm font-medium text-gray-500">About</dt>
+									<dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+										necessitatibus obcaecati, cupiditate non! Adipisci iste
+										inventore, eveniet sint nisi atque veniam non ipsam
+										provident dignissimos! Molestiae nostrum ad similique maxime
+										voluptas eos debitis, voluptatum doloribus quod ex, unde
+										sunt! Enim obcaecati delectus sunt perspiciatis dignissimos
+										praesentium optio repellat explicabo ea deserunt sapiente
+										eos expedita corrupti cupiditate impedit ducimus quaerat
+										voluptates laudantium sed earum, illum numquam assumenda.
+										Vel, architecto. Omnis modi corrupti officia numquam
+										molestias magnam architecto temporibus, totam non libero
+										laborum, maiores porro rem mollitia quisquam! Ut qui earum
+										autem, sed repellendus deserunt cupiditate nisi voluptatum
+										provident illo animi voluptatem placeat ex aliquid
+										reiciendis aspernatur. Minima incidunt, vel voluptatum sequi
+										doloremque, sit non libero excepturi eius modi placeat cum
+										labore? Ex.
+									</dd>
+								</div>
+								<div
+									class="
+										bg-white
+										px-4
+										py-5
+										sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6
+									"
+								>
+									<dt class="text-sm font-medium text-gray-500">Attachments</dt>
+									<dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+										<ul
+											class="
+												border border-gray-200
+												rounded-md
+												divide-y divide-gray-200
+											"
+										>
+											<li
+												class="
+													pl-3
+													pr-4
+													py-3
+													flex
+													items-center
+													justify-between
+													text-sm
+												"
+											>
+												<div class="w-0 flex-1 flex items-center">
+													<!-- Heroicon name: solid/paper-clip -->
+													<svg
+														class="flex-shrink-0 h-5 w-5 text-gray-400"
+														xmlns="http://www.w3.org/2000/svg"
+														viewBox="0 0 20 20"
+														fill="currentColor"
+														aria-hidden="true"
+													>
+														<path
+															fill-rule="evenodd"
+															d="M8 4a3 3 0 00-3 3v4a5 5 0 0010 0V7a1 1 0 112 0v4a7 7 0 11-14 0V7a5 5 0 0110 0v4a3 3 0 11-6 0V7a1 1 0 012 0v4a1 1 0 102 0V7a3 3 0 00-3-3z"
+															clip-rule="evenodd"
+														/>
+													</svg>
+													<span class="ml-2 flex-1 w-0 truncate">
+														resume_back_end_developer.pdf
+													</span>
+												</div>
+												<div class="ml-4 flex-shrink-0">
+													<a
+														href="#"
+														class="
+															font-medium
+															text-indigo-600
+															hover:text-indigo-500
+														"
+													>
+														Download
+													</a>
+												</div>
+											</li>
+											<li
+												class="
+													pl-3
+													pr-4
+													py-3
+													flex
+													items-center
+													justify-between
+													text-sm
+												"
+											>
+												<div class="w-0 flex-1 flex items-center">
+													<!-- Heroicon name: solid/paper-clip -->
+													<svg
+														class="flex-shrink-0 h-5 w-5 text-gray-400"
+														xmlns="http://www.w3.org/2000/svg"
+														viewBox="0 0 20 20"
+														fill="currentColor"
+														aria-hidden="true"
+													>
+														<path
+															fill-rule="evenodd"
+															d="M8 4a3 3 0 00-3 3v4a5 5 0 0010 0V7a1 1 0 112 0v4a7 7 0 11-14 0V7a5 5 0 0110 0v4a3 3 0 11-6 0V7a1 1 0 012 0v4a1 1 0 102 0V7a3 3 0 00-3-3z"
+															clip-rule="evenodd"
+														/>
+													</svg>
+													<span class="ml-2 flex-1 w-0 truncate">
+														coverletter_back_end_developer.pdf
+													</span>
+												</div>
+												<div class="ml-4 flex-shrink-0">
+													<a
+														href="#"
+														class="
+															font-medium
+															text-indigo-600
+															hover:text-indigo-500
+														"
+													>
+														Download
+													</a>
+												</div>
+											</li>
+										</ul>
+									</dd>
+								</div>
+							</dl>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

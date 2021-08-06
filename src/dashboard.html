@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../dist/style.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="flex w-screen h-screen text-gray-700">
+				<!-- Component Start -->
+				<div
+					class="
+						flex flex-col
+						items-start
+						md:w-60
+						w-20
+						flex-shrink-0
+						pb-4
+						overflow-auto
+						border-r border-gray-300
+					"
+				>
+					<a
+						class="
+							flex
+							items-center
+							justify-center
+							flex-shrink-0
+							w-full
+							h-16
+							bg-gray-100
+						"
+						href="#"
+					>
+						<img src="./logo.svg" alt="" srcset="" />
+					</a>
+					<div class="w-full h-screen p-4">
+						<a
+							class="
+								flex
+								items-center
+								justify-center
+								md:justify-start
+								flex-shrink-0
+								w-full
+								transition
+								duration-100
+								ease-linear
+								h-12
+								p-2
+								md:p-4
+								rounded-md
+								bg-gray-200
+								hover:bg-gray-200
+							"
+							href="#"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="h-6 w-6"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"
+								/>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"
+								/>
+							</svg>
+							<span class="ml-2 font-semibold hidden md:block">Dashboard</span>
+						</a>
+						<a
+							class="
+								group
+								flex
+								items-center
+								justify-center
+								md:justify-start
+								flex-shrink-0
+								w-full
+								transition
+								duration-100
+								ease-linear
+								h-12
+								mt-4
+								p-2
+								md:p-4
+								rounded-md
+								hover:bg-gray-200
+								font-semibold
+							"
+							href="./profile.html"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="h-6 w-6"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+								/>
+							</svg>
+							<span class="ml-2 hidden md:block">Profile</span>
+						</a>
+						<a
+							class="
+								flex
+								items-center
+								justify-center
+								md:justify-start
+								flex-shrink-0
+								w-full
+								transition
+								duration-100
+								ease-linear
+								h-12
+								mt-4
+								p-2
+								md:p-4
+								rounded-md
+								hover:bg-gray-200
+								font-semibold
+							"
+							href="#"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="h-6 w-6"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+								/>
+							</svg>
+							<span class="ml-2 hidden md:block">Posted</span>
+						</a>
+						<a
+							class="
+								flex
+								items-center
+								justify-center
+								md:justify-start
+								flex-shrink-0
+								w-full
+								transition
+								duration-100
+								ease-linear
+								h-12
+								mt-4
+								p-2
+								md:p-4
+								rounded-md
+								hover:bg-gray-200
+								font-semibold
+							"
+							href="#"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="h-6 w-6"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
+								/>
+							</svg>
+							<span class="ml-2 hidden md:block">Write</span>
+						</a>
+						<a
+							class="
+								flex
+								items-center
+								justify-center
+								md:justify-start
+								flex-shrink-0
+								w-full
+								transition
+								duration-100
+								ease-linear
+								h-12
+								mt-4
+								p-2
+								md:p-4
+								rounded-md
+								hover:bg-gray-200
+								font-semibold
+							"
+							href="#"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="h-6 w-6"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+								/>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+								/>
+							</svg>
+							<span class="ml-2 hidden md:block">Settings</span>
+						</a>
+						<a
+							class="
+								flex
+								items-center
+								justify-center
+								md:justify-start
+								flex-shrink-0
+								w-full
+								transition
+								duration-100
+								ease-linear
+								h-12
+								p-2
+								mt-2
+								md:p-4
+								rounded-md
+								hover:bg-gray-200
+								font-semibold
+							"
+							href="#"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="h-6 w-6"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
+								/>
+							</svg>
+							<span class="ml-2 hidden md:block">Theme</span>
+						</a>
+						<a
+							class="
+								relative
+								flex
+								items-center
+								w-full
+								h-12
+								px-3
+								mt-2
+								rounded-md
+								hover:bg-gray-200
+							"
+							href="#"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="h-6 w-6"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+								/>
+							</svg>
+							<span class="ml-2 text-sm font-medium hidden md:block"
+								>Notification</span
+							>
+							<span
+								class="
+									absolute
+									top-0
+									left-0
+									w-2
+									h-2
+									mt-2
+									ml-2
+									bg-indigo-500
+									rounded-full
+								"
+							></span>
+						</a>
+					</div>
+					<div class="w-full px-4">
+						<a
+							class="
+								mt-auto
+								flex
+								items-center
+								justify-center
+								md:justify-start
+								flex-shrink-0
+								w-full
+								transition
+								duration-100
+								ease-linear
+								p-2
+								md:p-4
+								h-12
+								rounded-md
+								hover:bg-gray-200
+							"
+							href="#"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="h-6 w-6"
+								viewBox="0 0 20 20"
+								fill="currentColor"
+							>
+								<path
+									fill-rule="evenodd"
+									d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z"
+									clip-rule="evenodd"
+								/>
+							</svg>
+							<span class="ml-2 hidden md:block">Logout</span>
+						</a>
+					</div>
+				</div>
+
+				<div class="flex flex-col flex-grow">
+					<div
+						class="
+							flex
+							items-center
+							flex-shrink-0
+							h-16
+							px-8
+							border-b border-gray-300
+						"
+					>
+						<h1 class="text-lg font-medium">Himanshu</h1>
+
+						<button
+							class="
+								flex
+								items-center
+								justify-center
+								h-10
+								px-4
+								ml-auto
+								text-sm
+								font-medium
+								border
+								hover:bg-gray-200
+								rounded-full
+							"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="h-6 w-6"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M17 13l-5 5m0 0l-5-5m5 5V6"
+								/>
+							</svg>
+							<span class="ml-2"> Download Report </span>
+						</button>
+					</div>
+
+					<div class="flex-grow p-6 overflow-auto bg-gray-200">
+						<div
+							class="
+								grid
+								lg:grid-cols-4
+								md:grid-cols-2
+								sm:grid-cols-1
+								gap-4
+								w-full
+							"
+						>
+							<div
+								class="
+									flex
+									items-center
+									bg-white
+									rounded-xl
+									p-4
+									hover:shadow
+									transition
+									duration-200
+									cursor-pointer
+									ease-in-out
+									transform
+									hover:scale-105
+								"
+							>
+								<div
+									class="
+										flex flex-shrink-0
+										items-center
+										justify-center
+										bg-green-200
+										rounded-full
+										h-16
+										w-16
+									"
+								>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										class="h-8 w-8 text-green-700"
+										fill="none"
+										viewBox="0 0 24 24"
+										stroke="currentColor"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+										/>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+										/>
+									</svg>
+								</div>
+								<div class="flex-grow flex flex-col ml-4">
+									<span class="text-xl font-bold">70K</span>
+									<div class="flex items-center justify-between">
+										<span class="text-gray-500">Total views</span>
+									</div>
+								</div>
+							</div>
+							<div
+								class="
+									flex
+									items-center
+									bg-white
+									rounded-xl
+									p-4
+									hover:shadow
+									transition
+									duration-200
+									cursor-pointer
+									ease-in-out
+									transform
+									hover:scale-105
+								"
+							>
+								<div
+									class="
+										flex flex-shrink-0
+										items-center
+										justify-center
+										bg-green-200
+										rounded-full
+										h-16
+										w-16
+									"
+								>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										class="h-8 w-8 text-green-700"
+										fill="none"
+										viewBox="0 0 24 24"
+										stroke="currentColor"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+										/>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+										/>
+									</svg>
+								</div>
+								<div class="flex-grow flex flex-col ml-4">
+									<span class="text-xl font-bold">70K</span>
+									<div class="flex items-center justify-between">
+										<span class="text-gray-500">Total views</span>
+									</div>
+								</div>
+							</div>
+							<div
+								class="
+									flex
+									items-center
+									bg-white
+									rounded-xl
+									p-4
+									hover:shadow
+									transition
+									duration-200
+									cursor-pointer
+									ease-in-out
+									transform
+									hover:scale-105
+								"
+							>
+								<div
+									class="
+										flex flex-shrink-0
+										items-center
+										justify-center
+										bg-green-200
+										rounded-full
+										h-16
+										w-16
+									"
+								>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										class="h-8 w-8 text-green-700"
+										fill="none"
+										viewBox="0 0 24 24"
+										stroke="currentColor"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+										/>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+										/>
+									</svg>
+								</div>
+								<div class="flex-grow flex flex-col ml-4">
+									<span class="text-xl font-bold">70K</span>
+									<div class="flex items-center justify-between">
+										<span class="text-gray-500">Total views</span>
+									</div>
+								</div>
+							</div>
+							<div
+								class="
+									flex
+									items-center
+									bg-white
+									rounded-xl
+									p-4
+									hover:shadow
+									transition
+									duration-200
+									cursor-pointer
+									ease-in-out
+									transform
+									hover:scale-105
+								"
+							>
+								<div
+									class="
+										flex flex-shrink-0
+										items-center
+										justify-center
+										bg-green-200
+										rounded-full
+										h-16
+										w-16
+									"
+								>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										class="h-8 w-8 text-green-700"
+										fill="none"
+										viewBox="0 0 24 24"
+										stroke="currentColor"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+										/>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+										/>
+									</svg>
+								</div>
+								<div class="flex-grow flex flex-col ml-4">
+									<span class="text-xl font-bold">70K</span>
+									<div class="flex items-center justify-between">
+										<span class="text-gray-500">Total views</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="grid grid-cols-1 mt-4">
+							<div class="bg-white rounded-xl" style="height: 26rem">
+								<div class="font-bold p-4">1 Months visitings</div>
+								<div
+									class="visitings"
+									style="height: 100%"
+									id="visitings"
+								></div>
+							</div>
+						</div>
+						<div class="mt-4 grid grid-cols-4 gap-4">
+							<div
+								class="h-24 col-span-1 bg-white border border-gray-300"
+							></div>
+							<div
+								class="h-24 col-span-1 bg-white border border-gray-300"
+							></div>
+							<div
+								class="h-24 col-span-1 bg-white border border-gray-300"
+							></div>
+							<div
+								class="h-24 col-span-2 bg-white border border-gray-300"
+							></div>
+							<div
+								class="h-24 col-span-1 bg-white border border-gray-300"
+							></div>
+							<div
+								class="h-24 col-span-1 bg-white border border-gray-300"
+							></div>
+							<div
+								class="h-24 col-span-2 bg-white border border-gray-300"
+							></div>
+							<div
+								class="h-24 col-span-3 bg-white border border-gray-300"
+							></div>
+							<div
+								class="h-24 col-span-1 bg-white border border-gray-300"
+							></div>
+							<div
+								class="h-24 col-span-1 bg-white border border-gray-300"
+							></div>
+							<div
+								class="h-24 col-span-1 bg-white border border-gray-300"
+							></div>
+							<div
+								class="h-24 col-span-2 bg-white border border-gray-300"
+							></div>
+							<div
+								class="h-24 col-span-1 bg-white border border-gray-300"
+							></div>
+							<div
+								class="h-24 col-span-1 bg-white border border-gray-300"
+							></div>
+							<div
+								class="h-24 col-span-2 bg-white border border-gray-300"
+							></div>
+							<div
+								class="h-24 col-span-3 bg-white border border-gray-300"
+							></div>
+							<div
+								class="h-24 col-span-1 bg-white border border-gray-300"
+							></div>
+							<div
+								class="h-24 col-span-1 bg-white border border-gray-300"
+							></div>
+							<div
+								class="h-24 col-span-1 bg-white border border-gray-300"
+							></div>
+							<div
+								class="h-24 col-span-2 bg-white border border-gray-300"
+							></div>
+							<div
+								class="h-24 col-span-1 bg-white border border-gray-300"
+							></div>
+							<div
+								class="h-24 col-span-1 bg-white border border-gray-300"
+							></div>
+							<div
+								class="h-24 col-span-2 bg-white border border-gray-300"
+							></div>
+							<div
+								class="h-24 col-span-3 bg-white border border-gray-300"
+							></div>
+						</div>
+					</div>
+				</div>
+				<!-- Component End  -->
+			</div>
+		</div>
+		<script src="//cdn.amcharts.com/lib/4/core.js"></script>
+		<script src="//cdn.amcharts.com/lib/4/charts.js"></script>
+		<script src="//cdn.amcharts.com/lib/4/maps.js"></script>
+		<script src="//cdn.amcharts.com/lib/4/geodata/worldLow.js"></script>
+
+		<script>
+			/**
+			 * ---------------------------------------
+			 * This demo was created using amCharts 4.
+			 *
+			 * For more information visit:
+			 * https://www.amcharts.com/
+			 *
+			 * Documentation is available at:
+			 * https://www.amcharts.com/docs/v4/
+			 * ---------------------------------------
+			 */
+
+			// Create chart instance
+			var chart = am4core.create("visitings", am4charts.XYChart);
+
+			// Add data
+			chart.data = [
+				{
+					country: "Lithuania",
+					litres: 501.9,
+					units: 250,
+				},
+				{
+					country: "Czech Republic",
+					litres: 301.9,
+					units: 222,
+				},
+				{
+					country: "Ireland",
+					litres: 201.1,
+					units: 170,
+				},
+				{
+					country: "Germany",
+					litres: 165.8,
+					units: 122,
+				},
+				{
+					country: "Australia",
+					litres: 139.9,
+					units: 99,
+				},
+				{
+					country: "Austria",
+					litres: 128.3,
+					units: 85,
+				},
+				{
+					country: "UK",
+					litres: 99,
+					units: 93,
+				},
+				{
+					country: "vf",
+					litres: 60,
+					units: 50,
+				},
+				{
+					country: "The Netherlavfnds",
+					litres: 50,
+					units: 42,
+				},
+				{
+					country: "The wd",
+					litres: 50,
+					units: 42,
+				},
+				{
+					country: "The w",
+					litres: 50,
+					units: 42,
+				},
+				{
+					country: "The q",
+					litres: 50,
+					units: 42,
+				},
+				{
+					country: "The p",
+					litres: 50,
+					units: 42,
+				},
+				{
+					country: "The o",
+					litres: 50,
+					units: 42,
+				},
+				{
+					country: "The n",
+					litres: 50,
+					units: 42,
+				},
+				{
+					country: "The m",
+					litres: 50,
+					units: 42,
+				},
+				{
+					country: "The l",
+					litres: 50,
+					units: 42,
+				},
+				{
+					country: "The kl",
+					litres: 50,
+					units: 42,
+				},
+				{
+					country: "The k",
+					litres: 50,
+					units: 42,
+				},
+				{
+					country: "The j",
+					litres: 50,
+					units: 42,
+				},
+				{
+					country: "The i",
+					litres: 50,
+					units: 42,
+				},
+				{
+					country: "The h",
+					litres: 50,
+					units: 42,
+				},
+				{
+					country: "The g",
+					litres: 50,
+					units: 42,
+				},
+				{
+					country: "The ef",
+					litres: 50,
+					units: 42,
+				},
+				{
+					country: "The e",
+					litres: 50,
+					units: 42,
+				},
+				{
+					country: "The d",
+					litres: 50,
+					units: 42,
+				},
+				{
+					country: "The ascasc",
+					litres: 50,
+					units: 42,
+				},
+				{
+					country: "The cs",
+					litres: 50,
+					units: 42,
+				},
+				{
+					country: "The c",
+					litres: 50,
+					units: 42,
+				},
+				{
+					country: "The asc",
+					litres: 150,
+					units: 42,
+				},
+				{
+					country: "The asc",
+					litres: 50,
+					units: 42,
+				},
+			];
+
+			// Create axes
+			let categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+			categoryAxis.dataFields.category = "country";
+			categoryAxis.title.text = "Views";
+
+			let valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+			valueAxis.title.text = "Views of this month";
+
+			// Create series
+			var series = chart.series.push(new am4charts.ColumnSeries());
+			series.dataFields.valueY = "litres";
+			series.dataFields.categoryX = "country";
+			series.name = "Sales";
+			series.columns.template.tooltipText =
+				"Series: {name}\nCategory: {categoryX}\nValue: {valueY}";
+			series.columns.template.fill = am4core.color("#047857");
+
+			var series2 = chart.series.push(new am4charts.LineSeries());
+			series2.name = "Units";
+			series2.stroke = am4core.color("#CDA2AB");
+			series2.strokeWidth = 3;
+			series2.dataFields.valueY = "units";
+			series2.dataFields.categoryX = "country";
+		</script>
+	</body>
+</html>
