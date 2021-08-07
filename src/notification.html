@@ -5,10 +5,11 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="../dist/style.css" />
-		<title>Blogs</title>
+		<title>Profile</title>
 	</head>
 	<body>
 		<div class="flex w-screen h-screen text-gray-700">
+			<!-- Component Start -->
 			<div
 				class="
 					flex flex-row
@@ -16,7 +17,6 @@
 					absolute
 					bottom-0
 					h-14
-					border-t
 					p-0
 					pb-0
 					bg-white
@@ -77,12 +77,13 @@
 							md:w-full md:justify-start md:p-4
 							hover:bg-gray-200
 							font-semibold
+							group
 						"
 						href="./dashboard.html"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							class="h-6 w-6"
+							class="h-6 w-6 group-hover:fill-current"
 							fill="none"
 							viewBox="0 0 24 24"
 							stroke="currentColor"
@@ -146,7 +147,6 @@
 						class="
 							group
 							flex
-							bg-gray-50
 							items-center
 							justify-center
 							md:justify-start
@@ -161,7 +161,6 @@
 							md:p-4
 							sm:rounded-md
 							hover:bg-gray-200
-							sm:bg-gray-200
 							font-semibold
 							sm:h-12
 							md:w-full
@@ -358,7 +357,8 @@
 							sm:mt-4
 							p-2
 							md:p-4
-							sm:rounded-md
+							bg-gray-50
+							sm:rounded-md sm:bg-gray-200
 							hover:bg-gray-200
 							font-semibold
 							sm:h-12
@@ -439,36 +439,34 @@
 				</div>
 			</div>
 			<div class="flex flex-col flex-grow">
+				<!-- Top navbar -->
 				<div
 					class="
 						flex
 						items-center
 						flex-shrink-0
-						h-16
-						px-8
+						h-14
 						border-b border-gray-300
+						overflow-hidden
 					"
 				>
-					<h1 class="text-lg font-medium">Himanshu</h1>
-
 					<button
 						class="
+							group
 							flex
 							items-center
 							justify-center
-							h-10
-							px-4
-							ml-auto
-							text-sm
-							font-medium
-							border
-							hover:bg-gray-200
-							rounded-full
+							flex-grow
+							h-full
+							hover:bg-indigo-100 hover:text-indigo-500
+							transition
+							duration-300
 						"
+						@click="showAccountLikeTab"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							class="h-6 w-6"
+							class="h-6 w-6 group-hover:fill-current"
 							fill="none"
 							viewBox="0 0 24 24"
 							stroke="currentColor"
@@ -477,294 +475,89 @@
 								stroke-linecap="round"
 								stroke-linejoin="round"
 								stroke-width="2"
-								d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+								d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"
 							/>
 						</svg>
-						<span class="ml-2"> Write </span>
+
+						<span class="ml-2 hidden sm:block">Likes</span>
+					</button>
+					<button
+						class="
+							flex
+							group
+							items-center
+							justify-center
+							flex-grow
+							hover:bg-indigo-50 hover:text-indigo-500
+							transition
+							duration-300
+							h-full
+						"
+						@click="showFollowsTab"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="h-6 w-6 group-hover:fill-current"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"
+							/>
+						</svg>
+						<span class="ml-2 hidden sm:block">Follows</span>
+					</button>
+					<button
+						class="
+							flex
+							group
+							items-center
+							justify-center
+							flex-grow
+							hover:bg-indigo-50 hover:text-indigo-500
+							transition
+							duration-300
+							h-full
+						"
+						@click="showSubscribesTab"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="h-6 w-6 group-hover:fill-current"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+							/>
+						</svg>
+						<span class="ml-2 hidden sm:block">Subscribes</span>
 					</button>
 				</div>
+				<!-- END Top navbar -->
 				<div class="flex-grow overflow-auto bg-gray-100">
 					<div class="bg-white overflow-hidden min-h-full">
-						<section class="text-gray-600 body-font overflow-hidden">
-							<div class="p-0 md:p-4 mx-auto">
-								<div class="flex flex-wrap gap-4">
-									<div class="w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
-										<div
-											class="
-												border-b
-												md:border
-												flex flex-col
-												items-start
-												rounded-none
-												md:rounded-lg md:hover:shadow-md
-												shadow-none
-											"
-										>
-											<div class="p-4">
-												<span
-													class="
-														inline-block
-														py-1
-														px-2
-														rounded
-														bg-indigo-50
-														text-indigo-500 text-xs
-														font-medium
-														tracking-widest
-													"
-													>CATEGORY</span
-												>
-												<h2
-													class="
-														sm:text-3xl
-														text-2xl
-														title-font
-														font-medium
-														text-gray-900
-														mt-4
-														mb-4
-													"
-												>
-													Pinterest DIY dreamcatcher gentrify single-origin
-													coffee
-												</h2>
-												<p class="leading-relaxed max-h-36">
-													Live-edge letterpress cliche, salvia fanny pack
-													humblebrag narwhal portland. VHS man braid palo santo
-													hoodie brunch trust fund. Bitters hashtag waistcoat
-													fashion axe chia unicorn. Plaid fixie chambray 90's,
-													slow-carb etsy tumeric. Lorem ipsum dolor sit amet
-													consectetur adipisicing elit. Quidem magni error id.
-													Reiciendis molestias quo amet quis dolor. Nam autem
-													saepe facere quod sed et quidem eligendi eaque
-													sapiente
-												</p>
-												<div class="flex items-center flex-wrap mt-5 w-full">
-													<a
-														class="
-															group
-															text-indigo-500
-															inline-flex
-															items-center
-															hover:bg-indigo-100
-															cursor-pointer
-															p-3
-															rounded-md
-															group
-														"
-													>
-														Details
-														<svg
-															class="w-4 h-4 ml-2"
-															viewBox="0 0 24 24"
-															stroke="currentColor"
-															stroke-width="2"
-															fill="none"
-															stroke-linecap="round"
-															stroke-linejoin="round"
-														>
-															<path d="M5 12h14"></path>
-															<path d="M12 5l7 7-7 7"></path>
-														</svg>
-													</a>
-													<span
-														class="
-															text-gray-400
-															mr-3
-															inline-flex
-															items-center
-															ml-auto
-															leading-none
-															text-sm
-															pr-3
-															py-1
-															border-r-2 border-gray-200
-														"
-													>
-														<svg
-															class="w-5 h-5 mr-1"
-															stroke="currentColor"
-															stroke-width="2"
-															fill="none"
-															stroke-linecap="round"
-															stroke-linejoin="round"
-															viewBox="0 0 24 24"
-														>
-															<path
-																d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
-															></path>
-															<circle cx="12" cy="12" r="3"></circle></svg
-														>1.2K
-													</span>
-													<span
-														class="
-															text-gray-400
-															inline-flex
-															items-center
-															leading-none
-															text-sm
-														"
-													>
-														<svg
-															xmlns="http://www.w3.org/2000/svg"
-															class="h-5 w-5"
-															fill="none"
-															viewBox="0 0 24 24"
-															stroke="currentColor"
-														>
-															<path
-																stroke-linecap="round"
-																stroke-linejoin="round"
-																stroke-width="2"
-																d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"
-															/>
-														</svg>
-														<span class="ml-2">6</span>
-													</span>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
-										<div
-											class="
-												border-b
-												md:border
-												flex flex-col
-												items-start
-												rounded-none
-												md:rounded-lg md:hover:shadow-md
-												shadow-none
-											"
-										>
-											<div class="p-4">
-												<span
-													class="
-														inline-block
-														py-1
-														px-2
-														rounded
-														bg-indigo-50
-														text-indigo-500 text-xs
-														font-medium
-														tracking-widest
-													"
-													>CATEGORY</span
-												>
-												<h2
-													class="
-														sm:text-3xl
-														text-2xl
-														title-font
-														font-medium
-														text-gray-900
-														mt-4
-														mb-4
-													"
-												>
-													Pinterest DIY dreamcatcher gentrify single-origin
-													coffee
-												</h2>
-												<p class="leading-relaxed max-h-36">
-													Live-edge letterpress cliche, salvia fanny pack
-													humblebrag narwhal portland. VHS man braid palo santo
-													hoodie brunch trust fund. Bitters hashtag waistcoat
-													fashion axe chia unicorn. Plaid fixie chambray 90's,
-													slow-carb etsy tumeric. Lorem ipsum dolor sit amet
-													consectetur adipisicing elit. Quidem magni error id.
-													Reiciendis molestias quo amet quis dolor. Nam autem
-													saepe facere quod sed et quidem eligendi eaque
-													sapiente
-												</p>
-												<div class="flex items-center flex-wrap mt-5 w-full">
-													<a
-														class="
-															group
-															text-indigo-500
-															inline-flex
-															items-center
-															hover:bg-indigo-100
-															cursor-pointer
-															p-3
-															rounded-md
-															group
-														"
-													>
-														Details
-														<svg
-															class="w-4 h-4 ml-2"
-															viewBox="0 0 24 24"
-															stroke="currentColor"
-															stroke-width="2"
-															fill="none"
-															stroke-linecap="round"
-															stroke-linejoin="round"
-														>
-															<path d="M5 12h14"></path>
-															<path d="M12 5l7 7-7 7"></path>
-														</svg>
-													</a>
-													<span
-														class="
-															text-gray-400
-															mr-3
-															inline-flex
-															items-center
-															ml-auto
-															leading-none
-															text-sm
-															pr-3
-															py-1
-															border-r-2 border-gray-200
-														"
-													>
-														<svg
-															class="w-5 h-5 mr-1"
-															stroke="currentColor"
-															stroke-width="2"
-															fill="none"
-															stroke-linecap="round"
-															stroke-linejoin="round"
-															viewBox="0 0 24 24"
-														>
-															<path
-																d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
-															></path>
-															<circle cx="12" cy="12" r="3"></circle></svg
-														>1.2K
-													</span>
-													<span
-														class="
-															text-gray-400
-															inline-flex
-															items-center
-															leading-none
-															text-sm
-														"
-													>
-														<svg
-															xmlns="http://www.w3.org/2000/svg"
-															class="h-5 w-5"
-															fill="none"
-															viewBox="0 0 24 24"
-															stroke="currentColor"
-														>
-															<path
-																stroke-linecap="round"
-																stroke-linejoin="round"
-																stroke-width="2"
-																d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"
-															/>
-														</svg>
-														<span class="ml-2">6</span>
-													</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</section>
+						<div class="p-4">
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
+							dolorum, consectetur labore sed ipsa amet quod facere molestias.
+							Mollitia dolores voluptas error cum tempora doloribus facere omnis
+							quae temporibus voluptatum, vero inventore ut veniam asperiores
+							eaque. Nostrum minima et assumenda dicta nemo ea deleniti
+							excepturi alias omnis voluptate nisi ullam esse cumque, quis
+							minus! Enim nihil tenetur sit eum accusamus tempore. Ipsum iusto
+							dolorem distinctio sunt esse expedita quaerat hic ea rerum
+							blanditiis laboriosam vero error, voluptates molestias. Cumque
+							laboriosam quisquam aspernatur nihil? Similique recusandae quas,
+							est ipsum autem distinctio.
+						</div>
 					</div>
 				</div>
 			</div>
