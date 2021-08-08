@@ -890,6 +890,10 @@ select {
   bottom: 4rem;
 }
 
+.-left-1 {
+  left: -0.25rem;
+}
+
 .z-20 {
   z-index: 20;
 }
@@ -1029,6 +1033,10 @@ select {
 
 .ml-5 {
   margin-left: 1.25rem;
+}
+
+.-ml-2 {
+  margin-left: -0.5rem;
 }
 
 .block {
@@ -1500,6 +1508,16 @@ select {
 .bg-indigo-50 {
   --tw-bg-opacity: 1;
   background-color: rgba(238, 242, 255, var(--tw-bg-opacity));
+}
+
+.bg-pink-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(236, 72, 153, var(--tw-bg-opacity));
+}
+
+.bg-purple-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(91, 33, 182, var(--tw-bg-opacity));
 }
 
 .bg-opacity-40 {
