@@ -438,7 +438,14 @@
 					</a>
 				</div>
 			</div>
-			<div class="flex flex-col flex-grow">
+			<div
+				class="
+					flex flex-col flex-grow-0
+					w-full
+					md:w-[calc(100vw-15rem)]
+					sm:w-[calc(100vw-5rem)]
+				"
+			>
 				<!-- Top navbar -->
 				<div
 					class="
@@ -543,24 +550,69 @@
 					</button>
 				</div>
 				<!-- END Top navbar -->
-				<div class="flex-grow overflow-auto bg-gray-100">
+				<div
+					class="
+						flex-grow-0
+						sm:flex-grow
+						overflow-auto
+						bg-gray-100
+						h-[calc(100vh-7rem)]
+						sm:h-screen
+					"
+				>
 					<div class="bg-white overflow-hidden min-h-full">
-						<div class="p-4">
-							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
-							dolorum, consectetur labore sed ipsa amet quod facere molestias.
-							Mollitia dolores voluptas error cum tempora doloribus facere omnis
-							quae temporibus voluptatum, vero inventore ut veniam asperiores
-							eaque. Nostrum minima et assumenda dicta nemo ea deleniti
-							excepturi alias omnis voluptate nisi ullam esse cumque, quis
-							minus! Enim nihil tenetur sit eum accusamus tempore. Ipsum iusto
-							dolorem distinctio sunt esse expedita quaerat hic ea rerum
-							blanditiis laboriosam vero error, voluptates molestias. Cumque
-							laboriosam quisquam aspernatur nihil? Similique recusandae quas,
-							est ipsum autem distinctio.
+						<div id="mySwipe" class="swipe min-h-full">
+							<div class="swipe-wrap">
+								<div class="w-full">
+									Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint
+									soluta laudantium quidem, labore neque, laborum nesciunt
+									perferendis reprehenderit cum eos eligendi beatae mollitia
+									laboriosam aut ut quibusdam temporibus. Alias, nihil!
+								</div>
+								<div>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
+									obcaecati ipsum ipsam ratione exercitationem aliquam eaque
+									eligendi quis, quibusdam sed deleniti accusamus, blanditiis
+									hic? Officia sit debitis a commodi quaerat?
+								</div>
+								<div>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
+									ratione reiciendis quod repudiandae explicabo reprehenderit
+									quam aperiam nesciunt dolores. Ullam totam amet eum illo
+									voluptates odit consequuntur aliquam sunt incidunt.
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<style>
+			.swipe {
+				overflow: hidden;
+				visibility: hidden;
+				position: relative;
+			}
+			.swipe-wrap {
+				overflow: hidden;
+				position: relative;
+			}
+			.swipe-wrap > div {
+				float: left;
+				width: 100%;
+				position: relative;
+				padding: 1rem;
+			}
+		</style>
+		<script src="./swipe.min.js"></script>
+		<script>
+			var element = document.getElementById("mySwipe");
+			window.mySwipe = new Swipe(element, {
+				callback: function (index, element) {
+					console.log(element.offsetWidth);
+				},
+				transitionEnd: function (index, element) {},
+			});
+		</script>
 	</body>
 </html>
