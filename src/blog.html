@@ -192,6 +192,7 @@
 															rounded-xl
 															md:rounded-none
 															mb-3
+															mt-auto
 															md:mb-0
 															w-11/12
 															md:w-full
@@ -677,6 +678,12 @@
 					},
 				};
 			}
+			// We listen to the resize event
+			window.addEventListener("resize", () => {
+				// We execute the same script as before
+				let vh = window.innerHeight * 0.01;
+				document.documentElement.style.setProperty("--vh", `${vh}px`);
+			});
 		</script>
 	</body>
 </html>
