@@ -8,7 +8,7 @@
 		<title>Profile</title>
 	</head>
 	<body>
-		<div class="flex w-screen h-screen text-gray-700">
+		<div class="flex w-screen text-gray-700">
 			<!-- Component Start -->
 			<div
 				class="
@@ -561,27 +561,29 @@
 					"
 				>
 					<div class="bg-white overflow-hidden min-h-full">
-						<div id="mySwipe" class="swipe min-h-full">
-							<div class="swipe-wrap">
-								<div class="w-full">
-									Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint
-									soluta laudantium quidem, labore neque, laborum nesciunt
-									perferendis reprehenderit cum eos eligendi beatae mollitia
-									laboriosam aut ut quibusdam temporibus. Alias, nihil!
-								</div>
-								<div>
-									Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
-									obcaecati ipsum ipsam ratione exercitationem aliquam eaque
-									eligendi quis, quibusdam sed deleniti accusamus, blanditiis
-									hic? Officia sit debitis a commodi quaerat?
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus nesciunt excepturi temporibus assumenda rerum beatae enim libero aliquid, omnis ea repellat modi quaerat voluptate natus! Et dolore at laudantium deserunt autem ut quia delectus odit voluptate asperiores, reiciendis totam est impedit tenetur rerum excepturi, itaque esse porro veniam facere, maxime dolores. Distinctio unde in illo nesciunt vitae ex molestiae quisquam deserunt consequatur, recusandae id tempore est impedit voluptate vero quasi consectetur at porro! Nam exercitationem voluptatibus amet ducimus? Ducimus quo voluptates accusantium assumenda sint quae, velit alias illum cumque incidunt.
-									Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere odio maxime sapiente alias, reprehenderit laborum? Tenetur repudiandae assumenda quae aperiam nisi voluptate error, quam cum incidunt laboriosam fugiat commodi praesentium! Cupiditate quidem numquam adipisci, voluptates nihil corporis non doloremque placeat quod ab at ratione, necessitatibus ducimus tempora reiciendis! Neque sed ipsum ex voluptates, veniam quod, nemo, atque laboriosam eos debitis et? Sed esse cum suscipit modi incidunt autem temporibus tempora ducimus magni obcaecati animi illo quas nulla eaque, molestiae reprehenderit numquam pariatur perspiciatis officiis. Corporis quia cupiditate laboriosam sapiente delectus!
-								</div>
-								<div>
-									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
-									ratione reiciendis quod repudiandae explicabo reprehenderit
-									quam aperiam nesciunt dolores. Ullam totam amet eum illo
-									voluptates odit consequuntur aliquam sunt incidunt.
+						<div class="p-0">
+							<div id="mySwipe" class="swipe">
+								<div class="swipe-wrap p-4">
+									<div class="w-full">
+										Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+										Sint soluta laudantium quidem, labore neque, laborum
+										nesciunt perferendis reprehenderit cum eos eligendi beatae
+										mollitia laboriosam aut ut quibusdam temporibus. Alias,
+										nihil!
+									</div>
+									<div>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
+										obcaecati ipsum ipsam ratione exercitationem aliquam eaque
+										eligendi quis, quibusdam sed deleniti accusamus, blanditiis
+										hic? Officia sit debitis a commodi quaerat?
+									</div>
+									<div>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Quae ratione reiciendis quod repudiandae explicabo
+										reprehenderit quam aperiam nesciunt dolores. Ullam totam
+										amet eum illo voluptates odit consequuntur aliquam sunt
+										incidunt.
+									</div>
 								</div>
 							</div>
 						</div>
@@ -603,13 +605,19 @@
 				float: left;
 				width: 100%;
 				position: relative;
-				padding: 1rem;
 			}
 		</style>
 		<script src="./swipe.min.js"></script>
 		<script>
 			var element = document.getElementById("mySwipe");
 			window.mySwipe = new Swipe(element, {
+				startSlide: 0,
+				auto: false,
+				draggable: true,
+				autoRestart: false,
+				continuous: false,
+				disableScroll: true,
+				stopPropagation: true,
 				callback: function (index, element) {
 					console.log(element.offsetWidth);
 				},
