@@ -8,7 +8,7 @@
 		<title>Profile</title>
 	</head>
 	<body>
-		<div class="flex w-screen text-gray-700">
+		<div class="flex w-screen h-screen text-gray-700">
 			<!-- Component Start -->
 			<div
 				class="
@@ -20,12 +20,14 @@
 					p-0
 					pb-0
 					bg-white
+					border-t
 					sm:flex-col
 					sm:relative
 					sm:w-20
 					sm:bottom-auto
 					sm:h-screen
 					sm:overflow-auto
+					sm:border-t-0
 					md:w-60
 					items-start
 					flex-shrink-0
@@ -63,6 +65,46 @@
 				>
 					<a
 						class="
+							group
+							flex
+							items-center
+							justify-center
+							md:justify-start
+							flex-shrink-0 flex-1
+							sm:w-full
+							transition
+							duration-100
+							ease-linear
+							h-full
+							p-2
+							md:p-4
+							sm:rounded-md sm:hover:bg-gray-200
+							focus:bg-gray-200
+							active:bg-gray-200
+							font-semibold
+							sm:h-12
+							md:w-full
+						"
+						href="./profile.html"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="h-6 w-6 group-hover:fill-current"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+							/>
+						</svg>
+						<span class="ml-2 hidden md:block">Feeds</span>
+					</a>
+					<a
+						class="
 							flex
 							items-center
 							justify-center
@@ -75,9 +117,12 @@
 							h-full
 							sm:rounded-md sm:h-12 sm:w-12
 							md:w-full md:justify-start md:p-4
-							hover:bg-gray-200
+							sm:hover:bg-gray-200
+							focus:bg-gray-200
+							active:bg-gray-200
 							font-semibold
 							group
+							sm:mt-4
 						"
 						href="./dashboard.html"
 					>
@@ -92,23 +137,19 @@
 								stroke-linecap="round"
 								stroke-linejoin="round"
 								stroke-width="2"
-								d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"
-							/>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"
+								d="M17 14v6m-3-3h6M6 10h2a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2zm10 0h2a2 2 0 002-2V6a2 2 0 00-2-2h-2a2 2 0 00-2 2v2a2 2 0 002 2zM6 20h2a2 2 0 002-2v-2a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2z"
 							/>
 						</svg>
 						<span class="ml-2 font-semibold hidden md:block">Dashboard</span>
 					</a>
+
 					<a
 						class="
 							group
-							flex
 							items-center
 							justify-center
+							hidden
+							sm:flex
 							md:justify-start
 							flex-shrink-0 flex-1
 							sm:w-full
@@ -119,48 +160,9 @@
 							sm:mt-4
 							p-2
 							md:p-4
-							sm:rounded-md
-							hover:bg-gray-200
-							font-semibold
-							sm:h-12
-							md:w-full
-						"
-						href="./profile.html"
-					>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							class="h-6 w-6"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke="currentColor"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-							/>
-						</svg>
-						<span class="ml-2 hidden md:block">Profile</span>
-					</a>
-					<a
-						class="
-							group
-							flex
-							items-center
-							justify-center
-							md:justify-start
-							flex-shrink-0 flex-1
-							sm:w-full
-							transition
-							duration-100
-							ease-linear
-							h-full
-							sm:mt-4
-							p-2
-							md:p-4
-							sm:rounded-md
-							hover:bg-gray-200
+							sm:rounded-md sm:hover:bg-gray-200
+							focus:bg-gray-200
+							active:bg-gray-200
 							font-semibold
 							sm:h-12
 							md:w-full
@@ -169,7 +171,7 @@
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							class="h-6 w-6"
+							class="h-6 w-6 group-hover:fill-current"
 							fill="none"
 							viewBox="0 0 24 24"
 							stroke="currentColor"
@@ -194,7 +196,7 @@
 							h-16
 							border
 							-mt-10
-							-mx-2
+							-mx-1
 							rounded-full
 							sm:h-12 sm:mx-0 sm:w-full
 							transition
@@ -202,14 +204,18 @@
 							ease-linear
 							sm:mt-4 sm:p-2
 							md:p-4
-							sm:border-0 sm:rounded-md
-							hover:bg-gray-200
+							bg-white
+							sm:border-0 sm:rounded-md sm:hover:bg-gray-200
+							focus:bg-gray-200
+							active:bg-gray-200
 							font-semibold
+							z-20
 						"
 						href="./new-post.html"
 					>
 						<span
 							class="
+								group
 								flex
 								items-center
 								justify-center
@@ -225,7 +231,7 @@
 						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
-								class="h-6 w-6 hidden sm:block"
+								class="h-6 w-6 group-hover:fill-current hidden sm:block"
 								fill="none"
 								viewBox="0 0 24 24"
 								stroke="currentColor"
@@ -239,7 +245,7 @@
 							</svg>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
-								class="h-6 w-6 sm:hidden"
+								class="h-6 w-6 group-hover:fill-current sm:hidden"
 								fill="none"
 								viewBox="0 0 24 24"
 								stroke="currentColor"
@@ -257,9 +263,10 @@
 					<a
 						class="
 							group
-							flex
+							hidden
 							items-center
 							justify-center
+							sm:flex
 							md:justify-start
 							flex-shrink-0 flex-1
 							sm:w-full
@@ -270,8 +277,9 @@
 							sm:mt-4
 							p-2
 							md:p-4
-							sm:rounded-md
-							hover:bg-gray-200
+							sm:rounded-md sm:hover:bg-gray-200
+							focus:bg-gray-200
+							active:bg-gray-200
 							font-semibold
 							sm:h-12
 							md:w-full
@@ -280,7 +288,7 @@
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							class="h-6 w-6"
+							class="h-6 w-6 group-hover:fill-current"
 							fill="none"
 							viewBox="0 0 24 24"
 							stroke="currentColor"
@@ -303,9 +311,10 @@
 					<a
 						class="
 							group
-							flex
+							hidden
 							items-center
 							justify-center
+							sm:flex
 							md:justify-start
 							flex-shrink-0 flex-1
 							sm:w-full
@@ -316,8 +325,9 @@
 							sm:mt-4
 							p-2
 							md:p-4
-							sm:rounded-md
-							hover:bg-gray-200
+							sm:rounded-md sm:hover:bg-gray-200
+							focus:bg-gray-200
+							active:bg-gray-200
 							font-semibold
 							sm:h-12
 							md:w-full
@@ -326,7 +336,7 @@
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							class="h-6 w-6"
+							class="h-6 w-6 group-hover:fill-current"
 							fill="none"
 							viewBox="0 0 24 24"
 							stroke="currentColor"
@@ -358,8 +368,9 @@
 							p-2
 							md:p-4
 							bg-gray-50
-							sm:rounded-md sm:bg-gray-200
-							hover:bg-gray-200
+							sm:rounded-md sm:bg-gray-200 sm:hover:bg-gray-200
+							focus:bg-gray-200
+							active:bg-gray-200
 							font-semibold
 							sm:h-12
 							md:w-full
@@ -368,7 +379,7 @@
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							class="h-6 w-6"
+							class="h-6 w-6 group-hover:fill-current"
 							fill="none"
 							viewBox="0 0 24 24"
 							stroke="currentColor"
@@ -398,10 +409,42 @@
 							"
 						></span>
 					</a>
+					<a
+						class="
+							relative
+							group
+							flex
+							items-center
+							justify-center
+							md:justify-start
+							flex-shrink-0 flex-1
+							sm:w-full
+							transition
+							duration-100
+							ease-linear
+							h-full
+							sm:mt-4
+							p-2
+							md:p-4
+							sm:rounded-md sm:bg-gray-200 sm:hover:bg-gray-200
+							focus:bg-gray-200
+							active:bg-gray-200
+							font-semibold
+							sm:h-12
+							md:w-full
+						"
+						href="#"
+					>
+						<img src="./author.jfif" class="h-8 w-8 rounded-full" />
+						<span class="ml-2 text-sm font-medium hidden md:block"
+							>Account</span
+						>
+					</a>
 				</div>
 				<div class="w-full px-4 hidden sm:block">
 					<a
 						class="
+							group
 							flex
 							items-center
 							justify-center
@@ -417,14 +460,16 @@
 							sm:mt-2
 							md:p-4
 							rounded-md
-							hover:bg-gray-200
+							sm:hover:bg-gray-200
+							focus:bg-gray-200
+							active:bg-gray-200
 							font-semibold
 						"
 						href="#"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							class="h-6 w-6"
+							class="h-6 w-6 group-hover:fill-current"
 							viewBox="0 0 20 20"
 							fill="currentColor"
 						>
@@ -456,6 +501,8 @@
 						border-b border-gray-300
 						overflow-hidden
 					"
+					id="tabs"
+					x-data="showTabs"
 				>
 					<button
 						class="
@@ -469,7 +516,8 @@
 							transition
 							duration-300
 						"
-						@click="showAccountLikeTab"
+						@click="follows=true"
+						:class="{ 'bg-indigo-100 text-indigo-500': likes }"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -500,7 +548,8 @@
 							duration-300
 							h-full
 						"
-						@click="showFollowsTab"
+						@click="likes = true"
+						:class="{ 'bg-indigo-100 text-indigo-500': follows }"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -531,6 +580,7 @@
 							h-full
 						"
 						@click="showSubscribesTab"
+						:class="{ 'bg-indigo-100 text-indigo-500': subscribe }"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -569,19 +619,7 @@
 										Sint soluta laudantium quidem, labore neque, laborum
 										nesciunt perferendis reprehenderit cum eos eligendi beatae
 										mollitia laboriosam aut ut quibusdam temporibus. Alias,
-										nihil! Lorem ipsum dolor sit amet consectetur adipisicing
-										elit. Quos voluptas velit repudiandae obcaecati, dolor
-										veniam repellat illo sequi, expedita nam facere nulla, vitae
-										at cumque dignissimos molestiae totam labore voluptates
-										perspiciatis. Reiciendis mollitia obcaecati eligendi
-										maiores, tempora alias, praesentium doloremque beatae
-										similique minus minima voluptatibus quam perspiciatis porro
-										vel, odio repudiandae asperiores illum excepturi ut corporis
-										impedit totam. Sint est earum reprehenderit possimus atque
-										inventore? Laboriosam labore mollitia beatae, exercitationem
-										praesentium sit debitis quidem. Pariatur enim suscipit unde!
-										Sit eligendi hic amet pariatur iste excepturi consequuntur
-										quisquam nobis quam aliquam.
+										nihil!
 									</div>
 									<div>
 										Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
@@ -619,22 +657,61 @@
 				position: relative;
 			}
 		</style>
+		<script defer src="./alpine.min.js"></script>
 		<script src="./swipe.min.js"></script>
 		<script>
-			var element = document.getElementById("mySwipe");
-			window.mySwipe = new Swipe(element, {
-				startSlide: 0,
-				auto: false,
-				draggable: true,
-				autoRestart: false,
-				continuous: false,
-				disableScroll: true,
-				stopPropagation: true,
-				callback: function (index, element) {
-					console.log(element.offsetWidth);
-				},
-				transitionEnd: function (index, element) {},
-			});
+			function showTabs() {
+				return {
+					likes: false,
+					follows: false,
+					subscribe: false,
+					show(tabname) {
+						this[tabname] = true;
+						console.log(tabname, this[tabname]);
+					},
+					init() {
+						var element = document.getElementById("mySwipe"),
+							tabs = document.getElementById("tabs"),
+							tabPages = ["likes", "follows", "subscribe"];
+						new Swipe(element, {
+							startSlide: 0,
+							auto: false,
+							draggable: true,
+							autoRestart: false,
+							continuous: false,
+							disableScroll: true,
+							stopPropagation: true,
+							callback: function (index, element) {
+								showTabs().show(tabPages[index]);
+								console.log("oolk");
+							},
+							transitionEnd: function (index, element) {},
+						});
+					},
+				};
+			}
+			class HTMLInclude extends HTMLElement {
+				constructor() {
+					super();
+					this.innerHTML = "Loading...";
+					this.loadContent();
+				}
+
+				async loadContent() {
+					const source = this.getAttribute("src");
+					if (!source) {
+						throw new Error("No src attribute given.");
+					}
+					const response = await fetch(source);
+					if (response.status !== 200) {
+						throw new Error(`Could not load resource: ${source}`);
+					}
+					const content = await response.text();
+					this.innerHTML = content;
+				}
+			}
+
+			window.customElements.define("html-include", HTMLInclude);
 		</script>
 	</body>
 </html>
