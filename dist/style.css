@@ -913,6 +913,18 @@ select {
   z-index: 10;
 }
 
+.z-auto {
+  z-index: auto;
+}
+
+.z-0 {
+  z-index: 0;
+}
+
+.\!z-0 {
+  z-index: 0 !important;
+}
+
 .col-span-12 {
   grid-column: span 12 / span 12;
 }
@@ -2363,6 +2375,10 @@ select {
 
   .sm\:rounded-md {
     border-radius: 0.375rem;
+  }
+
+  .sm\:rounded-2xl {
+    border-radius: 1rem;
   }
 
   .sm\:border {
