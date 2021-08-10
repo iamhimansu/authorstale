@@ -5,7 +5,6 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="../dist/style.css" />
-		<link rel="stylesheet" href="./swiperjs/swiper.min.css" />
 
 		<title>Feeds</title>
 	</head>
@@ -419,151 +418,6 @@
 							>Account</span
 						>
 					</a>
-					<div
-						class="
-							account-menu
-							fixed
-							flex
-							bottom-14
-							w-full
-							h-full
-							bg-black/50
-							inset-0
-							z-10
-							sm:hidden
-						"
-						x-show="accountMenuOpen"
-						x-cloak
-						x-transition:enter="transition ease-in-out duration-150"
-						x-transition:enter-start="opacity-0"
-						x-transition:enter-end="opacity-100"
-						x-transition:leave="transition ease-in-out duration-300"
-						x-transition:leave-start="opacity-100"
-						x-transition:leave-end="opacity-0"
-						x-show="accountMenuOpen"
-						@click="accountMenuOpen =! accountMenuOpen"
-					>
-						<div class="fixed left-0 bottom-0 right-0 z-20 flex flex-col mb-0">
-							<div
-								x-transition:enter="transition ease-in-out duration-300"
-								x-transition:enter-start="translate-y-full"
-								x-transition:enter-end="translate-y-0"
-								x-transition:leave="transition ease-in-out duration-300"
-								x-transition:leave-start="translate-y-0"
-								x-transition:leave-end="translate-y-full"
-								x-show="accountMenuOpen"
-								class="
-									relative
-									rounded-t-2xl
-									overflow-hidden
-									bg-white
-									border-t border-gray-200
-								"
-							>
-								<div class="mx-auto w-full">
-									<div
-										class="flex flex-col items-start w-full font-semibold"
-										@click="accountMenuOpen =! accountMenuOpen"
-									>
-										<a
-											class="
-												p-4
-												w-full
-												inline-flex
-												items-center
-												justify-start
-												hover:bg-gray-100
-												focus:bg-gray-100
-												active:bg-gray-100
-											"
-											href="#"
-										>
-											<svg
-												xmlns="http://www.w3.org/2000/svg"
-												class="h-6 w-6 mr-2"
-												fill="none"
-												viewBox="0 0 24 24"
-												stroke="currentColor"
-											>
-												<path
-													stroke-linecap="round"
-													stroke-linejoin="round"
-													stroke-width="2"
-													d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
-												/>
-												<path
-													stroke-linecap="round"
-													stroke-linejoin="round"
-													stroke-width="2"
-													d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-												/>
-											</svg>
-											Settings
-										</a>
-										<a
-											class="
-												p-4
-												w-full
-												inline-flex
-												items-center
-												justify-start
-												hover:bg-gray-100
-												focus:bg-gray-100
-												active:bg-gray-100
-												border-t
-											"
-											href="#"
-										>
-											<svg
-												xmlns="http://www.w3.org/2000/svg"
-												class="h-6 w-6 mr-2"
-												fill="none"
-												viewBox="0 0 24 24"
-												stroke="currentColor"
-											>
-												<path
-													stroke-linecap="round"
-													stroke-linejoin="round"
-													stroke-width="2"
-													d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
-												/>
-											</svg>
-											Posts
-										</a>
-										<a
-											class="
-												p-4
-												w-full
-												inline-flex
-												items-center
-												justify-start
-												hover:bg-gray-100
-												focus:bg-gray-100
-												active:bg-gray-100
-												border-t
-											"
-											href="#"
-										>
-											<svg
-												xmlns="http://www.w3.org/2000/svg"
-												fill="currentColor"
-												class="h-6 w-6 mr-2"
-												viewBox="0 0 16 16"
-											>
-												<path
-													d="M8 5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm4 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM5.5 7a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm.5 6a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
-												/>
-												<path
-													d="M16 8c0 3.15-1.866 2.585-3.567 2.07C11.42 9.763 10.465 9.473 10 10c-.603.683-.475 1.819-.351 2.92C9.826 14.495 9.996 16 8 16a8 8 0 1 1 8-8zm-8 7c.611 0 .654-.171.655-.176.078-.146.124-.464.07-1.119-.014-.168-.037-.37-.061-.591-.052-.464-.112-1.005-.118-1.462-.01-.707.083-1.61.704-2.314.369-.417.845-.578 1.272-.618.404-.038.812.026 1.16.104.343.077.702.186 1.025.284l.028.008c.346.105.658.199.953.266.653.148.904.083.991.024C14.717 9.38 15 9.161 15 8a7 7 0 1 0-7 7z"
-												/>
-											</svg>
-											Theme
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
 				</div>
 				<div class="w-full px-4 hidden sm:block">
 					<a
@@ -629,11 +483,27 @@
 					<!-- Top navbar -->
 					<div class="border-b">
 						<!-- Slider main container -->
-						<div class="swiper-container w-full">
+						<div class="swiper-container w-full overflow-hidden">
 							<!-- Additional required wrapper -->
-							<div class="swiper-wrapper px-4 py-2">
+							<div class="swiper-wrapper flex px-4 py-2">
 								<!-- Slides -->
-								<div class="swiper-slide">
+								<div class="swiper-slide flex-shrink-0">
+									<img
+										src="./author.jfif"
+										class="
+											w-full
+											h-full
+											rounded-full
+											bg-gradient-to-r
+											from-indigo-500
+											p-1
+											border
+										"
+										alt=""
+										srcset=""
+									/>
+								</div>
+								<div class="swiper-slide flex-shrink-0">
 									<img
 										src="./author.jfif"
 										class="w-full h-full rounded-full bg-gray-100 p-1 border"
@@ -641,7 +511,7 @@
 										srcset=""
 									/>
 								</div>
-								<div class="swiper-slide">
+								<div class="swiper-slide flex-shrink-0">
 									<img
 										src="./author.jfif"
 										class="w-full h-full rounded-full bg-gray-100 p-1 border"
@@ -649,7 +519,7 @@
 										srcset=""
 									/>
 								</div>
-								<div class="swiper-slide">
+								<div class="swiper-slide flex-shrink-0">
 									<img
 										src="./author.jfif"
 										class="w-full h-full rounded-full bg-gray-100 p-1 border"
@@ -657,7 +527,7 @@
 										srcset=""
 									/>
 								</div>
-								<div class="swiper-slide">
+								<div class="swiper-slide flex-shrink-0">
 									<img
 										src="./author.jfif"
 										class="w-full h-full rounded-full bg-gray-100 p-1 border"
@@ -665,7 +535,7 @@
 										srcset=""
 									/>
 								</div>
-								<div class="swiper-slide">
+								<div class="swiper-slide flex-shrink-0">
 									<img
 										src="./author.jfif"
 										class="w-full h-full rounded-full bg-gray-100 p-1 border"
@@ -673,7 +543,7 @@
 										srcset=""
 									/>
 								</div>
-								<div class="swiper-slide">
+								<div class="swiper-slide flex-shrink-0">
 									<img
 										src="./author.jfif"
 										class="w-full h-full rounded-full bg-gray-100 p-1 border"
@@ -681,7 +551,7 @@
 										srcset=""
 									/>
 								</div>
-								<div class="swiper-slide">
+								<div class="swiper-slide flex-shrink-0">
 									<img
 										src="./author.jfif"
 										class="w-full h-full rounded-full bg-gray-100 p-1 border"
@@ -689,7 +559,7 @@
 										srcset=""
 									/>
 								</div>
-								<div class="swiper-slide">
+								<div class="swiper-slide flex-shrink-0">
 									<img
 										src="./author.jfif"
 										class="w-full h-full rounded-full bg-gray-100 p-1 border"
@@ -697,7 +567,7 @@
 										srcset=""
 									/>
 								</div>
-								<div class="swiper-slide">
+								<div class="swiper-slide flex-shrink-0">
 									<img
 										src="./author.jfif"
 										class="w-full h-full rounded-full bg-gray-100 p-1 border"
@@ -705,15 +575,7 @@
 										srcset=""
 									/>
 								</div>
-								<div class="swiper-slide">
-									<img
-										src="./author.jfif"
-										class="w-full h-full rounded-full bg-gray-100 p-1 border"
-										alt=""
-										srcset=""
-									/>
-								</div>
-								<div class="swiper-slide">
+								<div class="swiper-slide flex-shrink-0">
 									<img
 										src="./author.jfif"
 										class="w-full h-full rounded-full bg-gray-100 p-1 border"
@@ -722,7 +584,7 @@
 									/>
 								</div>
 
-								<div class="swiper-slide">
+								<div class="swiper-slide flex-shrink-0">
 									<img
 										src="./author.jfif"
 										class="w-full h-full rounded-full bg-gray-100 p-1 border"
@@ -730,7 +592,7 @@
 										srcset=""
 									/>
 								</div>
-								<div class="swiper-slide">
+								<div class="swiper-slide flex-shrink-0">
 									<img
 										src="./author.jfif"
 										class="w-full h-full rounded-full bg-gray-100 p-1 border"
@@ -743,17 +605,9 @@
 					</div>
 					<!-- END Top navbar -->
 					<div class="min-h-full">
-						<div
-							class="
-								overflow-hidden
-								flex flex-wrap
-								p-0
-								sm:space-y-4
-								justify-start
-							"
-						>
-							<div class="w-full lg:w-full xl:w-1/2 border-b">
-								<div class="flex items-start md:hover:shadow-md shadow-none">
+						<div class="overflow-hidden flex-wrap flex p-0 justify-start">
+							<div class="w-full xl:w-1/2 border-b">
+								<div class="flex items-start md:hover:bg-gray-50 shadow-none">
 									<div class="p-4">
 										<!-- AUTHORS DETAILS -->
 										<div class="flex items-center justify-between mt-2">
@@ -908,8 +762,8 @@
 									</div>
 								</div>
 							</div>
-							<div class="w-full lg:w-full xl:w-1/2 border-b">
-								<div class="flex items-start md:hover:shadow-md shadow-none">
+							<div class="w-full lg:w-full xl:w-1/2 border-b 2xl:border-l">
+								<div class="flex items-start md:hover:bg-gray-50 shadow-none">
 									<div class="p-4">
 										<!-- AUTHORS DETAILS -->
 										<div class="flex items-center justify-between mt-2">
@@ -1911,6 +1765,153 @@
 				</div>
 			</div>
 		</div>
+		<!-- SLIDE UP OPTIONS -->
+		<div
+			class="
+				account-menu
+				fixed
+				flex
+				bottom-14
+				w-full
+				h-full
+				bg-black/50
+				inset-0
+				z-10
+				sm:hidden
+			"
+			x-show="accountMenuOpen"
+			x-cloak
+			x-transition:enter="transition ease-in-out duration-150"
+			x-transition:enter-start="opacity-0"
+			x-transition:enter-end="opacity-100"
+			x-transition:leave="transition ease-in-out duration-300"
+			x-transition:leave-start="opacity-100"
+			x-transition:leave-end="opacity-0"
+			x-show="accountMenuOpen"
+			@click="accountMenuOpen =! accountMenuOpen"
+		>
+			<div class="fixed left-0 bottom-0 right-0 z-20 flex flex-col mb-0">
+				<div
+					x-transition:enter="transition ease-in-out duration-300"
+					x-transition:enter-start="translate-y-full"
+					x-transition:enter-end="translate-y-0"
+					x-transition:leave="transition ease-in-out duration-300"
+					x-transition:leave-start="translate-y-0"
+					x-transition:leave-end="translate-y-full"
+					x-show="accountMenuOpen"
+					class="
+						relative
+						rounded-t-2xl
+						overflow-hidden
+						bg-white
+						border-t border-gray-200
+					"
+				>
+					<div class="mx-auto w-full">
+						<div
+							class="flex flex-col items-start w-full font-semibold"
+							@click="accountMenuOpen =! accountMenuOpen"
+						>
+							<a
+								class="
+									p-4
+									w-full
+									inline-flex
+									items-center
+									justify-start
+									hover:bg-gray-100
+									focus:bg-gray-100
+									active:bg-gray-100
+								"
+								href="#"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									class="h-6 w-6 mr-2"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+									/>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+									/>
+								</svg>
+								Settings
+							</a>
+							<a
+								class="
+									p-4
+									w-full
+									inline-flex
+									items-center
+									justify-start
+									hover:bg-gray-100
+									focus:bg-gray-100
+									active:bg-gray-100
+									border-t
+								"
+								href="#"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									class="h-6 w-6 mr-2"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+									/>
+								</svg>
+								Posts
+							</a>
+							<a
+								class="
+									p-4
+									w-full
+									inline-flex
+									items-center
+									justify-start
+									hover:bg-gray-100
+									focus:bg-gray-100
+									active:bg-gray-100
+									border-t
+								"
+								href="#"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									fill="currentColor"
+									class="h-6 w-6 mr-2"
+									viewBox="0 0 16 16"
+								>
+									<path
+										d="M8 5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm4 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM5.5 7a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm.5 6a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
+									/>
+									<path
+										d="M16 8c0 3.15-1.866 2.585-3.567 2.07C11.42 9.763 10.465 9.473 10 10c-.603.683-.475 1.819-.351 2.92C9.826 14.495 9.996 16 8 16a8 8 0 1 1 8-8zm-8 7c.611 0 .654-.171.655-.176.078-.146.124-.464.07-1.119-.014-.168-.037-.37-.061-.591-.052-.464-.112-1.005-.118-1.462-.01-.707.083-1.61.704-2.314.369-.417.845-.578 1.272-.618.404-.038.812.026 1.16.104.343.077.702.186 1.025.284l.028.008c.346.105.658.199.953.266.653.148.904.083.991.024C14.717 9.38 15 9.161 15 8a7 7 0 1 0-7 7z"
+									/>
+								</svg>
+								Theme
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END	SLIDE UP OPTIONS -->
 		<script src="./swiperjs/swiper.min.js"></script>
 		<script defer src="./alpine.min.js"></script>
 		<script>
