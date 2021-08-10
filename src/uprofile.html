@@ -659,7 +659,7 @@
 
 					<!-- USER DETAIL CONTAINER -->
 					<div class="flex items-center justify-start px-6 pt-4 relative">
-						<div class="profile-pic w-36 md:w-40 text-center">
+						<div class="profile-pic w-36 md:w-40 text-center flex-shrink-0">
 							<img
 								src="./user.jfif"
 								class="
@@ -676,11 +676,12 @@
 								alt=""
 							/>
 						</div>
-						<div class="flex justify-between items-center space-x-8">
+						<div class="flex justify-between items-center space-x-8 flex-grow">
 							<div
 								class="
 									likes-n-follows
-									flex
+									hidden
+									sm:flex
 									space-x-8
 									items-center
 									justify-between
@@ -696,17 +697,35 @@
 									<span class="text-sm">likes</span>
 								</div>
 							</div>
-							<div class="follow-button">
+							<div class="follow-button w-full">
 								<button
 									class="
+										w-full
 										p-2
 										px-4
 										font-bold
 										border border-gray-300
 										hover:bg-gray-200
 										rounded-full
+										inline-flex
+										items-center
+										justify-center
 									"
 								>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										class="h-6 w-6 md:hidden mr-2"
+										fill="none"
+										viewBox="0 0 24 24"
+										stroke="currentColor"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+										/>
+									</svg>
 									Follow
 								</button>
 							</div>
@@ -758,6 +777,7 @@
 								profile-tabs
 								border-b
 								overflow-x-scroll
+								no-scrollbar
 							"
 						>
 							<button
