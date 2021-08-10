@@ -986,6 +986,12 @@
 								slidesPerView: 1,
 								on: {
 									activeIndexChange: function (slide) {
+										if (slide.activeIndex === 0) {
+											document.querySelector(".profile-tabs").scrollLeft = 0;
+										}
+										if (slide.activeIndex === 4) {
+											document.querySelector(".profile-tabs").scrollLeft = 1000;
+										}
 										Alpine.store("activeTab", slide.activeIndex);
 									},
 								},
