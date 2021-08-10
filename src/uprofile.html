@@ -641,7 +641,6 @@
 							relative
 							overflow-hidden
 						"
-						x-bind:class="{ 'relative': !viewArticle }"
 					>
 						<img
 							src="./arch.jfif"
@@ -692,8 +691,10 @@
 										bg-white
 										mx-auto
 										border-1
+										w-24
+										h-24
+										p-1
 									"
-									:class="viewArticle ? 'absolute z-50 top-20 right-5 h-14 w-14' : 'w-24 h-24 p-1'"
 									alt=""
 								/>
 							</div>
@@ -771,7 +772,7 @@
 						<div
 							class="
 								flex
-								justify-center
+								justify-start
 								items-center
 								h-16
 								md:overflow-hidden
@@ -783,48 +784,55 @@
 							<button
 								class="
 									tab-links
-									flex-grow
+									md:flex-grow
 									h-full
 									outline-none
 									sm:hover:bg-gray-200
 									inline-flex
 									items-center
 									justify-center
+									px-4
+									md:p-0
 								"
 								@click="switchTab(0)"
-								x-bind:class="{ 'bg-gray-100': $store.activeTab === 0 }"
+								x-bind:class="{ 'bg-gray-100 font-bold': $store.activeTab === 0 }"
 							>
 								About
 							</button>
 							<button
 								class="
 									tab-links
-									flex-grow
+									md:flex-grow
+									w-auto
 									h-full
 									outline-none
 									sm:hover:bg-gray-200
 									inline-flex
 									items-center
 									justify-center
+									px-4
+									md:px-0
 								"
 								@click="switchTab(1)"
-								x-bind:class="{ 'bg-gray-100': $store.activeTab === 1 }"
+								x-bind:class="{ 'bg-gray-100 font-bold': $store.activeTab === 1 }"
 							>
 								Blogs
 							</button>
 							<button
 								class="
 									tab-links
-									flex-grow
+									md:flex-grow
 									h-full
 									outline-none
 									sm:hover:bg-gray-200
 									inline-flex
 									items-center
 									justify-center
+									md:px-0
+									px-4
 								"
 								@click="switchTab(2)"
-								x-bind:class="{ 'bg-gray-100': $store.activeTab === 2 }"
+								x-bind:class="{ 'bg-gray-100 font-bold': $store.activeTab === 2 }"
 							>
 								Followers
 							</button>
@@ -832,32 +840,36 @@
 							<button
 								class="
 									tab-links
-									flex-grow
+									md:flex-grow
 									h-full
 									outline-none
 									sm:hover:bg-gray-200
 									inline-flex
 									items-center
 									justify-center
+									px-4
+									md:p-0
 								"
 								@click="switchTab(3)"
-								x-bind:class="{ 'bg-gray-100': $store.activeTab === 3 }"
+								x-bind:class="{ 'bg-gray-100 font-bold': $store.activeTab === 3 }"
 							>
 								Subscribe
 							</button>
 							<button
 								class="
 									tab-links
-									flex-grow
+									md:flex-grow
 									h-full
 									outline-none
 									sm:hover:bg-gray-200
 									inline-flex
 									items-center
 									justify-center
+									px-4
+									md:p-0
 								"
 								@click="switchTab(4)"
-								:class="{ 'bg-gray-100': $store.activeTab === 4 }"
+								:class="{ 'bg-gray-100 font-bold': $store.activeTab === 4 }"
 							>
 								Authors
 							</button>
@@ -945,210 +957,6 @@
 				</div>
 				<!-- USER ARTICLES SHOW -->
 
-				<div
-					class="
-						absolute
-						top-0
-						left-0
-						w-screen
-						h-screen
-						overflow-hidden
-						bg-white
-						z-10
-					"
-					x-show="viewArticle"
-					style="display: none"
-				>
-					<!-- CONTENT TOP NAVBAR -->
-					<div class="flex justify-between items-center border-b h-14">
-						<div class="h-full">
-							<button
-								class="
-									inline-flex
-									h-full
-									items-center
-									justify-center
-									w-14
-									bg-gray-200
-								"
-								@click="viewArticle = false"
-							>
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									class="h-6 w-6"
-									fill="none"
-									viewBox="0 0 24 24"
-									stroke="currentColor"
-								>
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
-										d="M7 16l-4-4m0 0l4-4m-4 4h18"
-									/>
-								</svg>
-							</button>
-						</div>
-						<div class="flex items-center justify-center flex-shrink-0">
-							<div class="truncate w-48 font-semibold text-xl">
-								Himanshu's blogs alexandirag fajgh dajsgh
-							</div>
-						</div>
-						<div class="h-full">
-							<button
-								class="
-									inline-flex
-									h-full
-									w-14
-									bg-gray-200
-									items-center
-									justify-center
-								"
-							>
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									class="h-6 w-6"
-									fill="none"
-									viewBox="0 0 24 24"
-									stroke="currentColor"
-								>
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
-										d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-									/>
-								</svg>
-							</button>
-						</div>
-					</div>
-					<!-- END CONTENT NAVBAR -->
-					<div class="flex p-5 py-6 relative">
-						<div class="flex flex-col">
-							<div class="todays-time text-sm text-gray-600 font-semibold">
-								9th August 2021
-							</div>
-							<div class="authors-name">
-								<h1 class="font-bold text-xl">Himanshu</h1>
-							</div>
-						</div>
-					</div>
-					<!-- START ARTICLE SECTIONS -->
-					<div class="h-5/6 p-5 mt-auto">
-						<div
-							class="flex items-center justify-start space-x-6 overflow-x-auto"
-						>
-							<div
-								class="
-									flex flex-col
-									h-96
-									rounded-[2.5rem]
-									bg-red-400/80
-									p-4
-									w-80
-								"
-							>
-								<div class="flex flex-col mt-auto bg-white rounded-[2rem] p-4">
-									<div class="flex mt-3 items-center justify-between">
-										<span
-											class="
-												inline-block
-												bg-gray-200/75
-												font-medium
-												tracking-widest
-												p-2
-												rounded-xl
-											"
-											>Freelance</span
-										>
-										<div class="likes flex items-center justify-center">
-											<svg
-												xmlns="http://www.w3.org/2000/svg"
-												class="h-6 w-6 mr-2"
-												fill="none"
-												viewBox="0 0 24 24"
-												stroke="currentColor"
-											>
-												<path
-													stroke-linecap="round"
-													stroke-linejoin="round"
-													stroke-width="2"
-													d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"
-												/>
-											</svg>
-											16
-										</div>
-									</div>
-									<div class="h-100 truncate mt-3">
-										Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-										Nesciunt nemo aut est voluptates quo nisi quas beatae animi
-										consequuntur corrupti vel enim maiores a, velit alias
-										perferendis ad delectus omnis.
-									</div>
-									<div class="mt-3 flex items-center justify-between">
-										<div class="date">12th oct, 2020</div>
-										<div class="read-time text-sm font-bold">12 min</div>
-									</div>
-								</div>
-							</div>
-
-							<div
-								class="
-									flex flex-col
-									h-96
-									rounded-[2.5rem]
-									bg-red-400/80
-									p-4
-									w-80
-								"
-							>
-								<div class="flex flex-col mt-auto bg-white rounded-[2rem] p-4">
-									<div class="flex mt-3 items-center justify-between">
-										<span
-											class="
-												inline-block
-												bg-gray-200/75
-												font-medium
-												tracking-widest
-												p-2
-												rounded-xl
-											"
-											>Freelance</span
-										>
-										<div class="likes flex items-center justify-center">
-											<svg
-												xmlns="http://www.w3.org/2000/svg"
-												class="h-6 w-6 mr-2"
-												fill="none"
-												viewBox="0 0 24 24"
-												stroke="currentColor"
-											>
-												<path
-													stroke-linecap="round"
-													stroke-linejoin="round"
-													stroke-width="2"
-													d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"
-												/>
-											</svg>
-											16
-										</div>
-									</div>
-									<div class="h-100 truncate mt-3">
-										Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-										Nesciunt nemo aut est voluptates quo nisi quas beatae animi
-										consequuntur corrupti vel enim maiores a, velit alias
-										perferendis ad delectus omnis.
-									</div>
-									<div class="mt-3 flex items-center justify-between">
-										<div class="date">12th oct, 2020</div>
-										<div class="read-time text-sm font-bold">12 min</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- END ARTICLE SECTIONS -->
-				</div>
 				<!-- END ARTICLES -->
 			</div>
 			<!-- END PROFILE -->
