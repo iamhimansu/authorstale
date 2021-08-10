@@ -644,6 +644,7 @@
 							fill="none"
 							viewBox="0 0 24 24"
 							stroke="currentColor"
+							:class="{ 'fill-current': $store.currentView === 0}"
 						>
 							<path
 								stroke-linecap="round"
@@ -676,6 +677,7 @@
 							fill="none"
 							viewBox="0 0 24 24"
 							stroke="currentColor"
+							:class="{ 'fill-current': $store.currentView === 1}"
 						>
 							<path
 								stroke-linecap="round"
@@ -707,6 +709,7 @@
 							fill="none"
 							viewBox="0 0 24 24"
 							stroke="currentColor"
+							:class="{ 'fill-current': $store.currentView === 2}"
 						>
 							<path
 								stroke-linecap="round"
@@ -720,44 +723,27 @@
 				</div>
 				<!-- END Top navbar -->
 				<div
-					class="flex-grow-0 sm:flex-grow bg-gray-100 h-screen sm:overflow-auto"
+					class="
+						flex-grow-0
+						sm:flex-grow
+						overflow-auto
+						bg-gray-100
+						h-[calc(100vh-7rem)]
+						sm:h-screen
+					"
 				>
-					<div class="bg-white overflow-hidden min-h-full x-container p-4">
+					<div class="bg-white overflow-hidden min-h-full x-container">
 						<div class="swiper-wrapper flex items-start content-start">
-							<div
-								class="
-									swiper-slide
-									flex-shrink-0
-									overflow-y-auto
-									h-[calc(100vh-7rem)]
-									sm:h-full
-								"
-							>
+							<div class="swiper-slide flex-shrink-0 p-4">
 								Lorem ipsum dolor sit amet consectetur, adipisicing
 							</div>
-							<div
-								class="
-									swiper-slide
-									flex-shrink-0
-									overflow-y-auto
-									h-[calc(100vh-7rem)]
-									sm:h-full
-								"
-							>
+							<div class="swiper-slide flex-shrink-0 p-4">
 								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
 								obcaecati ipsum ipsam ratione exercitationem aliquam eaque
 								eligendi quis, quibusdam sed deleniti accusamus, blanditiis hic?
 								Officia sit debitis a commodi quaerat?
 							</div>
-							<div
-								class="
-									swiper-slide
-									flex-shrink-0
-									overflow-y-auto
-									h-[calc(100vh-7rem)]
-									sm:h-full
-								"
-							>
+							<div class="swiper-slide flex-shrink-0 p-4">
 								laborum quisquam qui, aspernatur distinctio assumenda doloribus
 								animi tempore? Veritatis eveniet possimus, placeat est labore
 								facere quisquam atque, deleniti eaque voluptate ipsa quaerat
