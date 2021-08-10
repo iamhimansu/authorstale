@@ -635,8 +635,8 @@
 						class="
 							group
 							cover-image
-							h-[14rem]
-							lg:h-[20rem]
+							h-[8rem]
+							lg:h-[14rem]
 							w-full
 							relative
 							overflow-hidden
@@ -655,118 +655,89 @@
 								duration-200
 							"
 						/>
-						<div
-							class="
-								absolute
-								flex flex-row
-								top-0
-								left-0
-								p-4
-								px-10
-								items-center
-								justify-center
-								w-full
-								h-full
-								md:space-x-12
-								space-x-6
-								max-w-7xl
-								mx-auto
-							"
-						>
-							<div
-								class="
-									flex
-									items-center
-									justify-center
-									profile-photo
-									md:flex-grow
-									flex-shrink-0
-								"
-							>
+					</div>
+
+					<!-- USER DETAIL CONTAINER -->
+					<div class="flex items-center justify-start px-6 pt-4 relative">
+						<div class="profile-pic w-36 md:w-40 text-center">
+							<div class="-top-12 md:-top-20 absolute">
 								<img
 									src="./user.jfif"
-									class="
-										md:h-[8rem] md:w-[8rem]
-										rounded-full
-										bg-white
-										mx-auto
-										border-1
-										w-24
-										h-24
-										p-1
-									"
+									class="h-28 w-28 md:h-36 md:w-36 rounded-full bg-white p-1"
 									alt=""
 								/>
 							</div>
+						</div>
+						<div class="flex justify-between items-center space-x-8">
 							<div
 								class="
-									h-40
-									flex flex-row
-									rounded-xl
-									transition
-									ease-out
-									duration-200
-									md:group-hover:bg-white/30
-									w-full
-									md:px-8
-									space-x-4
+									likes-n-follows
+									flex
+									space-x-8
+									items-center
+									justify-between
 								"
 							>
-								<div
+								<div class="flex flex-col">
+									<h1 class="text-xl font-semibold">56</h1>
+									<span class="text-sm">posts</span>
+								</div>
+								<div class="h-10 w-1 bg-gray-100 rounded-xl"></div>
+								<div class="flex flex-col">
+									<h1 class="text-xl font-semibold">56K</h1>
+									<span class="text-sm">likes</span>
+								</div>
+							</div>
+							<div class="follow-button">
+								<button
 									class="
-										hidden
-										md:flex
-										account-posts
-										flex-col flex-grow
-										items-center
-										justify-center
+										p-2
+										px-4
+										font-bold
+										border border-gray-300
+										hover:bg-gray-200
+										rounded-full
 									"
 								>
-									<span
-										class="text-4xl md:text-6xl font-bold uppercase text-white"
-									>
-										26
-									</span>
-									<h1 class="text-white text-xl">Posts</h1>
-								</div>
-								<div
-									class="
-										account-likes
-										flex flex-col flex-grow
-										items-center
-										justify-center
-									"
-								>
-									<span
-										class="text-4xl md:text-6xl font-bold uppercase text-white"
-									>
-										26k
-									</span>
-									<h1 class="text-white text-xl">Likes</h1>
-								</div>
-								<div
-									class="account-followers flex flex-col flex-grow text-center"
-								>
-									<div
-										class="account-likes flex flex-col flex-grow justify-center"
-									>
-										<span
-											class="
-												text-4xl
-												md:text-6xl
-												font-bold
-												uppercase
-												text-white
-											"
-										>
-											26k
-										</span>
-										<h1 class="text-white text-xl">Followers</h1>
-									</div>
-								</div>
+									Follow
+								</button>
 							</div>
 						</div>
 					</div>
+					<div class="user-details p-4 border-b">
+						<div class="flex items-center justify-start space-x-2">
+							<h1 class="text-xl font-semibold">Himanshu Raj Aman</h1>
+							<span class="w-1 h-1 bg-gray-200 rounded-full"></span>
+							<h3 class="username font-semibold">@himanshu</h3>
+						</div>
+						<p class="mt-1">Hey my name is himanshu raj Aman</p>
+						<div class="additional-details mt-3 flex space-x-2">
+							<span class="tracking-wide inline-flex items-center">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									class="h-5 w-5"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+									/>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+									/></svg
+								>India</span
+							>
+							<span class="font-light">Joined on 9th Aug, 2021</span>
+						</div>
+					</div>
+					<!-- END USER DETAIL CONTAINER -->
 					<!-- TABS -->
 					<div class="tabs-dnm">
 						<div
@@ -990,7 +961,8 @@
 											document.querySelector(".profile-tabs").scrollLeft = 0;
 										}
 										if (slide.activeIndex === 4) {
-											document.querySelector(".profile-tabs").scrollLeft = window.innerWidth;
+											document.querySelector(".profile-tabs").scrollLeft =
+												window.innerWidth;
 										}
 										Alpine.store("activeTab", slide.activeIndex);
 									},
