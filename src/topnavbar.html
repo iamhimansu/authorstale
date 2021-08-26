@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-auto">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../dist/style.css" />
+		<title>Top navbar</title>
+	</head>
+	<body
+		x-data="navigation"
+		class="w-screen overflow-auto h-[calc(100vh-3.5rem)] sm:min-h-screen"
+	>
+		<style>
+			[x-cloak] {
+				display: none;
+			}
+		</style>
+		<!-- Top navbar -->
+		<div class="">
+			<div class="w-full h-14">
+				<div
+					class="
+						flex
+						items-center
+						justify-start
+						font-semibold
+						h-full
+						shadow-sm
+						border-b
+						w-full
+						px-8
+					"
+				>
+					<div class="logo font-serif font-normal">Authors Tale</div>
+					<div class="w-96 ml-auto">
+						<input
+							type="text"
+							class="
+								hidden
+								md:block
+								w-full
+								border-gray-200
+								rounded-lg
+								focus:border-gray-300
+								ring-0
+								focus:ring-transparent
+							"
+							placeholder="Search (Press '/' to focus)"
+							@keyup.slash.window="$el.focus()"
+						/>
+					</div>
+					<div
+						class="
+							sm:ml-auto
+							items-center
+							justify-start
+							sm:space-x-4
+							group
+							fixed
+							sm:relative
+							bottom-0
+							w-screen
+							sm:w-auto
+							h-14
+							left-0
+							flex
+							shadow-lg
+							sm:shadow-none
+							border-t
+							sm:border-0
+							bg-white
+						"
+					>
+						<a
+							href="#"
+							class="
+								hover:bg-gray-200
+								p-2
+								px-3
+								sm:rounded-full
+								transition
+								ease-linear
+								inline-flex
+								items-center
+								justify-center
+								h-full
+								sm:h-auto
+								flex-1
+							"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="h-6 w-6"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+								/>
+							</svg>
+							<span class="ml-1 hidden sm:block">Home</span>
+						</a>
+						<a
+							href="#"
+							class="
+								md:hidden
+								hover:bg-gray-200
+								p-2
+								sm:rounded-full
+								transition
+								ease-linear
+								inline-flex
+								items-center
+								justify-center
+								h-full
+								sm:h-auto
+								flex-1
+							"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="h-6 w-6"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+								/>
+							</svg>
+						</a>
+						<a
+							href="#"
+							class="
+								hover:bg-gray-200
+								p-2
+								px-3
+								sm:rounded-full
+								transition
+								ease-linear
+								inline-flex
+								items-center
+								justify-center
+								flex-1
+								h-full
+								sm:h-auto
+							"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="h-6 w-6"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+								/>
+							</svg>
+							<span class="ml-1 hidden sm:block">Write</span>
+						</a>
+						<a
+							href="#"
+							class="
+								hover:bg-gray-200
+								p-2
+								px-3
+								sm:rounded-full
+								transition
+								ease-linear
+								inline-flex
+								items-center
+								justify-center
+								relative
+								h-full
+								sm:h-auto
+								flex-1
+							"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="h-6 w-6"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+								/>
+							</svg>
+							<span
+								class="
+									absolute
+									top-2
+									sm:top-1
+									w-2
+									h-2
+									left-1/2
+									sm:left-4
+									bg-indigo-500
+									rounded-full
+								"
+							></span>
+							<span
+								class="
+									absolute
+									top-2
+									sm:top-1
+									w-2
+									h-2
+									left-1/2
+									sm:left-4
+									bg-indigo-500
+									rounded-full
+									animate-ping
+								"
+							></span>
+							<span class="ml-1 hidden sm:block">Notifications</span>
+						</a>
+
+						<a
+							href="#"
+							@click.prevent="accountMenuOpen =! accountMenuOpen"
+							class="
+								h-full
+								sm:h-12 sm:w-12
+								inline-flex
+								items-center
+								justify-center
+								flex-shrink-0 flex-grow
+							"
+						>
+							<img
+								class="
+									h-10
+									w-10
+									bg-gray-100
+									p-1
+									rounded-full
+									hover:bg-gray-300
+									focus:border
+									transition
+									ease-linear
+								"
+								src="./user.jfif"
+								alt=""
+							/>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="p-4 mx-auto">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni commodi
+				ducimus quod, aliquid maxime eos excepturi, itaque, quibusdam sequi est
+				libero explicabo ullam provident similique dolorem alias et natus
+				architecto perspiciatis possimus facilis harum. Dolore a at ipsum non
+				dolor praesentium deserunt possimus magni exercitationem eaque, eveniet
+				magnam quod, ea pariatur dignissimos expedita. Magnam adipisci quaerat
+				dolor sit vel corrupti consequatur delectus odit error cupiditate illum
+				dolore praesentium voluptas dolorem cum architecto nobis ex beatae rem
+				minima, saepe aut! Vel iusto nemo corporis dignissimos eos hic.
+				Blanditiis nam aspernatur, distinctio sit nemo sunt architecto pariatur,
+				nesciunt obcaecati quo, explicabo quos repellat itaque asperiores
+				molestias ab. Obcaecati ea consequuntur veniam, harum deleniti mollitia
+				et dicta quod nihil vero vel unde totam beatae in quisquam repellat cum
+				asperiores quam incidunt recusandae ab repudiandae sapiente libero?
+				Praesentium asperiores molestias suscipit. Molestiae atque commodi
+				voluptas vitae officiis. Consectetur nesciunt libero reprehenderit unde
+				asperiores voluptatem perferendis quod autem quaerat iure eum, illo
+				repudiandae maxime iste, praesentium repellat ex ab aliquid porro hic
+				laboriosam iusto! Dolores consequatur porro pariatur suscipit? Est,
+				incidunt blanditiis! Illum voluptas accusamus ullam dolore repellendus
+				quam iste velit nihil alias reiciendis quas, similique cupiditate
+				ratione cumque? Cum, obcaecati! Exercitationem doloremque voluptas
+				cupiditate cum. Fuga nesciunt fugit architecto blanditiis ad unde
+				necessitatibus ducimus numquam eum voluptas repellendus nam animi autem,
+				error quis sunt. Accusamus quam commodi explicabo porro omnis
+				repudiandae necessitatibus minus ipsa odit. Molestiae placeat sequi
+				rerum ducimus obcaecati modi quibusdam delectus explicabo doloremque!
+				Beatae sequi dolore obcaecati odio quae voluptatibus facere voluptatum
+				quod laborum, ipsam eaque. Dolorum voluptatem delectus dolorem quo a
+				aspernatur eligendi et quas consequatur? Architecto aut hic sunt nisi
+				error molestias placeat perferendis repellat minima tenetur, est,
+				ratione laudantium earum maxime ducimus in itaque numquam quaerat
+				provident odit quod nemo pariatur! Nobis facere corporis aliquam, saepe
+				sequi aut vero delectus doloremque ipsam dolor repudiandae ullam. Quis
+				nam voluptatem reiciendis corrupti aspernatur officiis quasi, temporibus
+				aperiam recusandae sunt similique impedit omnis odit iure at itaque
+				facere dicta suscipit nesciunt. Quod similique voluptatum nihil vel
+				impedit consequuntur id. Cumque expedita cupiditate facere sed, porro
+				aspernatur dignissimos, voluptas unde quisquam voluptates quos enim, a
+				corrupti recusandae. Ad minus esse laboriosam totam, tenetur at facere.
+				Voluptate pariatur numquam incidunt repellat voluptatibus modi rerum,
+				nemo maiores consequuntur doloremque. Suscipit error nemo rerum totam
+				sapiente repudiandae, iusto autem laboriosam architecto ex placeat quas
+				asperiores earum quisquam pariatur minima neque et, officiis cum omnis
+				possimus odit facere assumenda sed! Rem quis reiciendis exercitationem
+				labore vel culpa, enim consequuntur harum ea tempore beatae fugit.
+				Veritatis esse sint, quibusdam quaerat dolorum enim praesentium quia
+				eius exercitationem animi quasi architecto possimus doloribus suscipit
+				id iusto veniam odio sapiente ipsam in. Quaerat exercitationem, pariatur
+				consequatur nemo odio aut ad hic esse assumenda necessitatibus nulla
+				cumque nihil eaque expedita facere quis officiis recusandae rem
+				perspiciatis distinctio velit tenetur repellendus! Earum fugit ullam
+				fuga quasi non voluptatum dolores, sunt, omnis corporis numquam minus
+				sit ad magnam accusantium voluptatem vero cum error deserunt repellat
+				sapiente modi. Modi voluptatum unde numquam. Numquam fugiat velit illum
+				quia repellat ad nam temporibus tempora voluptatibus minus debitis ipsum
+				saepe, eius suscipit libero cumque commodi rem est officia pariatur
+				ratione perspiciatis recusandae hic consequuntur! Ad facilis ex ipsum
+				debitis perspiciatis, harum quisquam tempore recusandae amet porro natus
+				sapiente ut consequatur, dolores id sunt quo cupiditate expedita magnam
+				repellat eveniet cumque dignissimos? Unde aspernatur, id cumque culpa
+				nulla tempora praesentium delectus dolore perspiciatis quidem sapiente
+				molestiae, quibusdam et officia, ut quam doloremque vitae. Voluptatibus
+				a praesentium dolorum quos dolores repudiandae. Atque harum non sint
+				iste, iusto praesentium nobis, consequatur voluptas modi ut voluptate
+				possimus laudantium optio commodi aliquid fugiat temporibus laborum
+				assumenda magni officia eos accusamus. Exercitationem obcaecati
+				architecto minima repellendus nam explicabo id delectus iure
+				necessitatibus mollitia, nostrum, vel vero enim tempore corporis est?
+				Adipisci modi dolorum amet atque et perferendis autem possimus impedit
+				reiciendis quia laborum reprehenderit id nihil quis quaerat, ratione vel
+				quo excepturi cum. Dignissimos odio nisi vitae ad blanditiis quia iste
+				minus sint cum consectetur minima tempore, reiciendis earum aspernatur
+				necessitatibus quisquam culpa consequatur libero vel officiis. Libero,
+				accusantium aspernatur molestiae minima facilis maxime culpa itaque nam
+				magni laboriosam placeat optio odit enim, excepturi, iure iste saepe
+				distinctio expedita. Provident accusantium aliquid nobis nihil dicta
+				eaque cumque totam, tenetur voluptas, in laudantium repellat ex quas
+				inventore placeat ullam fuga animi nisi molestias iusto natus velit.
+				Sapiente cupiditate iusto tempora! Maxime officiis quasi, eos quas, esse
+				similique corrupti ullam, qui asperiores accusamus repellat iusto. Esse
+				exercitationem quidem veniam molestias vero earum veritatis consectetur,
+				nam aspernatur enim excepturi quas non quasi assumenda sapiente aperiam
+				doloribus recusandae eius est officia asperiores a consequuntur nostrum
+				sunt? Nulla ipsam earum numquam sapiente magnam saepe rem quas explicabo
+				natus molestias? Tempora quasi alias non similique porro, perferendis
+				quam quas, itaque odit a autem voluptatum aut necessitatibus ex saepe
+				fuga quae earum eligendi accusantium temporibus? Quis fugit, labore
+				similique itaque nisi magni ullam beatae enim architecto quisquam omnis
+				blanditiis adipisci repudiandae neque illum optio velit non quos laborum
+				obcaecati tenetur! Corrupti similique officia deserunt in aspernatur
+				tempora, voluptatem neque optio commodi, deleniti consequuntur nostrum
+				consectetur. Modi expedita possimus nihil, qui earum beatae sapiente
+				quas, nostrum debitis commodi saepe eaque. Inventore provident adipisci
+				ut, quas impedit sequi velit quia. Sit quis ex fuga ad eum, tenetur
+				laborum distinctio quia molestiae quisquam dolorum unde non velit vel
+				doloremque, neque quo! Harum doloribus doloremque impedit vero quidem at
+				illum blanditiis velit eligendi placeat.
+			</div>
+		</div>
+
+		<div
+			x-cloak
+			x-show="accountMenuOpen"
+			x-transition:enter="transition ease-in-out duration-150"
+			x-transition:enter-start="opacity-0"
+			x-transition:enter-end="opacity-100"
+			x-transition:leave="transition ease-in-out duration-300"
+			x-transition:leave-start="opacity-100"
+			x-transition:leave-end="opacity-0"
+			@keyup.escape.window="accountMenuOpen  = false"
+			class="
+				navigation-menu
+				fixed
+				sm:absolute
+				bottom-14
+				sm:top-16 sm:bottom-auto
+				left-0
+				sm:left-auto sm:right-10
+				w-screen
+				sm:w-72
+				h-screen
+				sm:h-auto sm:border
+				overflow-hidden
+				bg-black/70
+				sm:bg-white sm:rounded-2xl
+				z-50
+				sm:shadow-lg
+				flex flex-col
+				backdrop-blur-sm
+			"
+		>
+			<div
+				x-cloak
+				x-show="accountMenuOpen"
+				x-transition:enter="transition ease-in-out duration-150"
+				x-transition:enter-start="translate-y-full"
+				x-transition:enter-end="translate-y-0"
+				x-transition:leave="transition ease-in-out duration-300"
+				x-transition:leave-start="translate-y-0"
+				x-transition:leave-end="translate-y-full"
+				@click.away="accountMenuOpen = false"
+				class="
+					mt-auto
+					h-auto
+					more-options
+					w-full
+					bg-white
+					rounded-t-2xl
+					sm:rounded-2xl
+					overflow-hidden
+				"
+			>
+				<a
+					href="#"
+					class="
+						hover:bg-gray-200
+						flex
+						items-center
+						justify-start
+						p-4
+						transition
+						ease-linear
+					"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="h-6 w-6"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+						/>
+					</svg>
+					<span class="ml-1 hidden sm:block"></span>
+					Dashboard
+				</a>
+				<a
+					href="#"
+					class="
+						hover:bg-gray-200
+						flex
+						items-center
+						justify-start
+						border-t
+						p-4
+						transition
+						ease-linear
+					"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="h-6 w-6"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+						/>
+					</svg>
+					<span class="ml-1 hidden sm:block"></span>
+					Profile
+				</a>
+
+				<a
+					href="#"
+					class="
+						hover:bg-gray-200
+						flex
+						items-center
+						justify-start
+						p-4
+						border-t
+						transition
+						ease-linear
+					"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="h-6 w-6"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+						/>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+						/>
+					</svg>
+					<span class="ml-1 hidden sm:block"></span>
+					Settings
+				</a>
+				<a
+					href="#"
+					class="
+						hover:bg-gray-200
+						flex
+						items-center
+						justify-start
+						p-4
+						border-t
+						transition
+						ease-linear
+					"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="h-6 w-6"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+						/>
+					</svg>
+					<span class="ml-1 hidden sm:block"></span>
+					My articles
+				</a>
+				<a
+					href="#"
+					class="
+						hover:bg-gray-200
+						flex
+						items-center
+						justify-start
+						p-4
+						border-t
+						transition
+						ease-linear
+					"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="h-6 w-6"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+						/>
+					</svg>
+					<span class="ml-1 hidden sm:block"></span>
+					Logout
+				</a>
+			</div>
+		</div>
+		<script defer src="./alpine.min.js"></script>
+		<script>
+			function navigation() {
+				return {
+					accountMenuOpen: false,
+				};
+			}
+		</script>
+	</body>
+</html>
